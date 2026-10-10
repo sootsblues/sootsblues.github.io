@@ -1,0 +1,66 @@
+{
+  "title": "Treasured Artists",
+  "description": "Sustaining Roots Music, a Raleigh Charter High School community project supporting Piedmont blues musicians since 2006.",
+  "kicker": "",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/1649201483.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "",
+    "caption": ""
+  },
+  "facts": [],
+  "pull_quote": {
+    "text": "",
+    "by": "",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "gallery",
+      "photos": [
+        {
+          "image": "/photos/4-05-08-2nd-annual-george-higgs-lets-loose_orig.jpg",
+          "caption": "George Higgs lets loose at the 2nd annual benefit, 2008"
+        },
+        {
+          "image": "/photos/ironin-board-sam-w-moher-blues-pat-cohen-iron-s-board-sam-played-1st-unc-piedmont-blues-fest-and-the-final-fat-tuesday-at-rchs_orig.jpg",
+          "caption": "Ironing Board Sam with Mother Blues Pat Cohen. Sam played the 1st UNC Piedmont Blues Fest and the final Fat Tuesday at RCHS"
+        },
+        {
+          "image": "/photos/johnd2_orig.png",
+          "caption": "John Dee Holeman"
+        },
+        {
+          "image": "/photos/justin-robinson-and-his-harp-visit-c-2014_orig.jpg",
+          "caption": "Justin Robinson and his harp visit, c. 2014"
+        },
+        {
+          "image": "/photos/lightnin-wells-at-unc-ch-s-love-house-c-2012_orig.jpg",
+          "caption": "Lightnin' Wells at UNC-CH's Love House, c. 2012"
+        },
+        {
+          "image": "/photos/mary-annettes-photo-by-kate-rhudy-c-2012_orig.jpg",
+          "caption": "The Mary Annettes, photo by Kate Rhudy, c. 2012"
+        },
+        {
+          "image": "/photos/reed-turchi-plays-gospel-at-7th-annual-in-2013_orig.jpg",
+          "caption": "Reed Turchi plays gospel at the 7th annual, 2013"
+        },
+        {
+          "image": "/photos/sam-john-dee-photo-7a_orig.jpg",
+          "caption": "Ironing Board Sam & John Dee Holeman"
+        },
+        {
+          "image": "/photos/tim-duffy-s-photo-of-george-higgs-in-memoriam_orig.jpg",
+          "caption": "Tim Duffy's photo of George Higgs, in memoriam"
+        },
+        {
+          "image": "/photos/dom-flemmons-sittin-in-at-1st-anual-2007-2_orig.jpg",
+          "caption": "Dom Flemmons sittin' in at the 1st annual, 2007"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "title": "2017 Folklore Projects",
+  "description": "The SOOTS class of 2017 created a research project based off of an exhibit of Bill Ferris' Photography at the UNC Chapel Hill Center for the Study of the…",
+  "kicker": "Folk Projects",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/1943319304.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "",
+    "caption": ""
+  },
+  "facts": [
+    {
+      "label": "SOOTS leaders",
+      "value": "Jack Martinez and Prarthana Kalmath"
+    }
+  ],
+  "pull_quote": {
+    "text": "",
+    "by": "",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "body": "<p>The SOOTS class of 2017 created a research project based off of an exhibit of Bill Ferris' Photography at the UNC Chapel Hill Center for the Study of the American South. The leading SOOTS students analysed the south through the lens of Archaeological Photographer Bill Ferris, and examined how other artists reflected the themes in Ferris' work. The Students' projects can be seen below. Students included themes from work in Nasher Museum's exhibit \"Southern Accent\", which featured the work of Raleigh Charter's own Bill Thelen. Ultimately, the chance to explore is ready and waiting.</p>"
+    },
+    {
+      "type": "columns",
+      "columns": [
+        {
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "Film by Jack Martinez"
+            },
+            {
+              "type": "photo",
+              "image": "/photos/farmers-in-wa-county-mi_orig.jpg",
+              "caption": "",
+              "link": "jack.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

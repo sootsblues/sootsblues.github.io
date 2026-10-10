@@ -1,0 +1,52 @@
+# Builds the website from content/ and publishes it with GitHub Pages.
+#
+# It runs after every change to the main branch, including every save in Pages CMS.
+# You can also start it by hand: Actions tab > "Build and publish the website" > Run workflow.
+# If a run fails, the previous version of the site stays online. Open the failed run in the
+# Actions tab to read why (see docs/EDITING.md, "If the site doesn't update").
+name: Build and publish the website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# one publish at a time; a newer save waits for the current one to finish
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+      - name: Check that the editor settings match the content
+        run: python tools/check_editor_config.py
+      - name: Build the site
+        run: python build.py
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

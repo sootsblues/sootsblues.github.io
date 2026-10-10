@@ -1,0 +1,90 @@
+{
+  "title": "Sustaining Roots Reflections",
+  "description": "Sustaining Roots Music, a Raleigh Charter High School community project supporting Piedmont blues musicians since 2006.",
+  "kicker": "",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/longtable.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "",
+    "caption": ""
+  },
+  "facts": [],
+  "pull_quote": {
+    "text": "",
+    "by": "",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "gallery",
+      "photos": [
+        {
+          "image": "/photos/groupphoto_orig.png",
+          "caption": ""
+        },
+        {
+          "image": "/photos/johnd_orig.png",
+          "caption": "John Dee Holeman"
+        },
+        {
+          "image": "/photos/art-farm_orig.jpg",
+          "caption": "Art Farm"
+        },
+        {
+          "image": "/photos/group2_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/longtable_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/fat-tuesday-2006_orig.jpg",
+          "caption": "Fat Tuesday, 2006"
+        },
+        {
+          "image": "/photos/nicecake_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/johnd2_1_orig.png",
+          "caption": "John Dee Holeman"
+        },
+        {
+          "image": "/photos/img-4062_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-4076_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-4078_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/4-05-08-soots-cake-bake-picture_orig.jpg",
+          "caption": "SOOTS Cake Bake, 2008"
+        },
+        {
+          "image": "/photos/dsc-0982_1_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/soots-in-hillsborough-with-sister-perry-and-denise-duffy-of-mmrf-may-2019_orig.jpeg",
+          "caption": "SOOTS in Hillsborough with Sister Perry and Denise Duffy of Music Maker Relief Foundation, May 2019"
+        },
+        {
+          "image": "/photos/112_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/dsc-0051_orig.jpg",
+          "caption": ""
+        }
+      ]
+    }
+  ]
+}

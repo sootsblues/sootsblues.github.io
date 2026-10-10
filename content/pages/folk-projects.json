@@ -1,0 +1,45 @@
+{
+  "title": "Folklore Projects",
+  "description": "When students are interested and willing to work independently, the opportunity to delve more deeply into ethnographic practices is available. From the…",
+  "kicker": "",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/2328951.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "/photos/img-2754.jpg",
+    "caption": ""
+  },
+  "facts": [],
+  "intro": "<p>When students are interested and willing to work independently, the opportunity to delve more deeply into ethnographic practices is available.  From the example of UNC's Bill Ferris and his colleagues at Center for the Study of the American South (CSAS), students have been introduced to oral histories, folklife archives, folklore professors and a wide variety of art and material culture that inform students' cultural understandings underlying the vernacular music of the American South. So far, the SOOTS class of 2016 followed their love of food to research, photograph and film four distinct stories of our local Southern Foodways. In 2017, students chose to respond artistically to Bill Ferris' photography from \"The South in Color,\" as well as the Nasher Museum's exhibit \"Southern Accent\", which featured the work of Raleigh Charter's own Bill Thelen. Ultimately, the chance to explore is ready and waiting. Through these folklore projects we all have the ability to record conversations, to capture images and share our insights if we make a our phones act a bit \"smarter.\"  SOOTS simply encourages our students to see the extraordinary in the otherwise ordinary world if we are only a bit more aware of wonders surrounding us.</p>",
+  "projects": [
+    {
+      "year": "2026",
+      "image": "/photos/7924224.jpg",
+      "text": "<p><strong>The Macon Farm</strong>, by Nathan Bradshaw &amp; Mason Oehlrich. For generations, 300 acres of North Carolina farmland have held more than crops and barns—they have held a family’s history.</p>",
+      "button_label": "The Macon Farm",
+      "button_link": "/2026.html"
+    },
+    {
+      "year": "2018",
+      "image": "/photos/sister-perry-fall-2018-for-pc.jpg",
+      "text": "<p>In 2018 SOOTS leader emeritus, Taylor Martin, researched protest music of North Carolina following an invitation to develop a music curriculum for high school students. Taylor prepared extensive materials to help understand the role of Nina Simone's music in the Civil Rights Movement. Taylor's work with Mr. Montague on this project is in the final editing stage.</p>",
+      "button_label": "Unavailable",
+      "button_link": ""
+    },
+    {
+      "year": "2017",
+      "image": "/photos/hwy-61_orig.jpg",
+      "text": "<p>In 2017 SOOTS leaders Jack Martinez and Prarthana Kalmath researched art in the South following an exhibit of photography by Bill Ferris from his book <em>The South in Color</em>. They prepared presentations for Phoenix Fest at Raleigh Charter High School, which can be seen below.</p>",
+      "button_label": "2017 Folklore Projects",
+      "button_link": "/2017.html"
+    },
+    {
+      "year": "2016",
+      "image": "/photos/a4arskneghxwcko2necmtal4zivxo581rylvkcmi-wtkkbojct4go01ctgmnauqaprzkwq-s2048_orig.jpg",
+      "text": "<p>In 2016 SOOTS leaders Bridget Williams, Halle Michalak, Taylor Martin and Kayla Klinc created a folklore project for Community Crosswalk at Raleigh Charter High School, focusing especially on the role of food in the South.</p>",
+      "button_label": "2016 Folklore Projects",
+      "button_link": "/2016.html"
+    }
+  ]
+}

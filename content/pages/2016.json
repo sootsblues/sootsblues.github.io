@@ -1,0 +1,104 @@
+{
+  "title": "2016 Folklore Projects",
+  "description": "The SOOTs class of 2016 created a research project based off the difference between stereotypical and authentic southern food. The team studied the topic…",
+  "kicker": "Folk Projects",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/317718502.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "",
+    "caption": ""
+  },
+  "facts": [
+    {
+      "label": "SOOTS leaders",
+      "value": "Bridget Williams, Halle Michalak, Taylor Martin and Kayla Klinc"
+    }
+  ],
+  "pull_quote": {
+    "text": "",
+    "by": "",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "body": "<p>The SOOTs class of 2016 created a research project based off  the difference between stereotypical and authentic southern food. The team studied the topic through an interview with Bridget Williams and shopping around King's Red and White Grocery Store in Durham, NC.</p>"
+    },
+    {
+      "type": "columns",
+      "columns": [
+        {
+          "blocks": [
+            {
+              "type": "photo",
+              "image": "/photos/a4arskneghxwcko2necmtal4zivxo581rylvkcmi-wtkkbojct4go01ctgmnauqaprzkwq-s2048_orig.jpg",
+              "caption": "",
+              "link": ""
+            },
+            {
+              "type": "text",
+              "body": "<p>The outside of King’s Red and White in Durham, NC. Image taken to portray the local family-operated grocery store. Inspired by Charles Reagan Wilson’s The New Encyclopedia of Southern Culture. The hand made signs adds to the authenticity of the American South.</p>"
+            },
+            {
+              "type": "gallery",
+              "photos": [
+                {
+                  "image": "/photos/unjyokotilz6o79avpbctartnzukdg-ytnm8jsmr0qbyjy87m1aj6whhpdawfiwpvhxxtw-s2048_orig.jpg",
+                  "caption": ""
+                },
+                {
+                  "image": "/photos/buopnzdutexyuqqsxzjzeanijccrujnq9wjmkfnrdqs4eoob5ownazvat119tsbbene0tq-s2048_orig.jpg",
+                  "caption": ""
+                },
+                {
+                  "image": "/photos/aljrt7vntkyk-zdk0h-l-ndsayl3gq4ftafekvfonwfge0g3-r7sl2unlmcmrlasl1oqw-s2048_orig.jpg",
+                  "caption": ""
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "body": "<p>Fresh local produce go great in your American Southern dishes.  The variety of produce and meat that King's offers not only look delicious, but in easy access to difficult foods, such as pig's feet.  Along with the amazing variety, the Workers spray all the produce by hand to keep them fresh. This adds to the experience of American Southern cooking.</p>"
+            },
+            {
+              "type": "button",
+              "label": "Bridget Williams Interview",
+              "link": "https://www.youtube.com/watch?v=Ok5NqcfQg2E"
+            },
+            {
+              "type": "button",
+              "label": "Student Video",
+              "link": "https://www.youtube.com/watch?v=ZPjyqBZsNtY"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "photo",
+              "image": "/photos/wnpnn283wueerjeftsrsvfhru2ym08-lqvpv8h9zui-d8m1mqimyxsynmfufov-iugaqvq-s2048_orig.jpg",
+              "caption": "",
+              "link": ""
+            },
+            {
+              "type": "text",
+              "body": "<p>Owner Brink King shares the history behind Kings’. He is grateful for his parents starting the store and being able to grow up helping out. He says that if the store didn’t start when it did, it would’ve been hard to sustain the store in this day and age.</p>"
+            },
+            {
+              "type": "photo",
+              "image": "/photos/weebly.jpg",
+              "caption": "",
+              "link": ""
+            },
+            {
+              "type": "text",
+              "body": "<p>Kings’ isn’t just about the local food. Kings’ values their customers, creating a personal experience. They treat everyone with the famous American Southern hospitality.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "site_url": "https://www.sootsblues.org/",
+  "email": "sootsblues@gmail.com",
+  "social": [
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/sootsblues/",
+      "handle": "@sootsblues"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/soots.blues",
+      "handle": "soots.blues"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/user/SustainingRoots",
+      "handle": "SustainingRoots"
+    }
+  ],
+  "logo": "/photos/soots-2-removebg-preview_orig.png",
+  "share_image": "/photos/soots-philcook-sisterperry-rchs-040919-183.jpg",
+  "default_description": "Sustaining Roots Music, a Raleigh Charter High School community project supporting Piedmont blues musicians since 2006.",
+  "menu": [
+    {
+      "label": "About",
+      "link": "about-us.html",
+      "feature_image": "/photos/soots-banner.jpg",
+      "items": [
+        {
+          "label": "Our Story",
+          "link": "about-us.html",
+          "indent": false
+        },
+        {
+          "label": "Social",
+          "link": "social.html",
+          "indent": false
+        },
+        {
+          "label": "Contact Us",
+          "link": "contact-us.html",
+          "indent": false
+        },
+        {
+          "label": "Donations",
+          "link": "donations.html",
+          "indent": false
+        }
+      ]
+    },
+    {
+      "label": "In the Field",
+      "link": "in-the-field.html",
+      "feature_image": "/photos/birdseyeportraits-041720-jsteadman-00316.jpg",
+      "items": [
+        {
+          "label": "Soil to Soul Series",
+          "link": "soil-to-soul-series.html",
+          "indent": false
+        },
+        {
+          "label": "Episode 1: This Little Light of Ours",
+          "link": "episode-1-this-little-light-of-ours.html",
+          "indent": true
+        },
+        {
+          "label": "Episode 2: Food Folklore",
+          "link": "episode-2-food-folklore.html",
+          "indent": true
+        },
+        {
+          "label": "Episode 3: Fountain",
+          "link": "episode-3-fountain.html",
+          "indent": true
+        },
+        {
+          "label": "Folk Projects",
+          "link": "folk-projects.html",
+          "indent": false
+        },
+        {
+          "label": "2026: The Macon Farm",
+          "link": "2026.html",
+          "indent": true
+        },
+        {
+          "label": "2017",
+          "link": "2017.html",
+          "indent": true
+        },
+        {
+          "label": "2016",
+          "link": "2016.html",
+          "indent": true
+        }
+      ]
+    },
+    {
+      "label": "Events",
+      "link": "events.html",
+      "feature_image": "/photos/cake-bake-2024-1.jpg",
+      "items": [
+        {
+          "label": "Cake Bake",
+          "link": "cake-bake.html",
+          "indent": false
+        },
+        {
+          "label": "Art Farm",
+          "link": "art-farm.html",
+          "indent": false
+        },
+        {
+          "label": "Fat Tuesday",
+          "link": "fat-tuesday.html",
+          "indent": false
+        },
+        {
+          "label": "Sit Downs",
+          "link": "sit-downs.html",
+          "indent": false
+        }
+      ]
+    },
+    {
+      "label": "Gallery",
+      "link": "photo-gallery.html",
+      "feature_image": "/photos/img-7268.jpg",
+      "items": [
+        {
+          "label": "Photo Gallery",
+          "link": "photo-gallery.html",
+          "indent": false
+        },
+        {
+          "label": "Treasured Artists",
+          "link": "treasured-artists.html",
+          "indent": false
+        },
+        {
+          "label": "Archive",
+          "link": "archive.html",
+          "indent": false
+        }
+      ]
+    },
+    {
+      "label": "Local Support",
+      "link": "local-support.html",
+      "feature_image": "",
+      "items": []
+    }
+  ],
+  "donate_button": {
+    "label": "Donate",
+    "link": "donations.html"
+  },
+  "sections": [
+    {
+      "name": "soil",
+      "pages": [
+        "soil-to-soul-series.html",
+        "episode-1-this-little-light-of-ours.html",
+        "episode-2-food-folklore.html",
+        "episode-3-fountain.html"
+      ]
+    },
+    {
+      "name": "folk",
+      "pages": [
+        "folk-projects.html",
+        "2026.html",
+        "2017.html",
+        "bill-ferris.html",
+        "jack.html",
+        "prarthana.html",
+        "interviews.html",
+        "harrison.html",
+        "2016.html"
+      ]
+    },
+    {
+      "name": "events",
+      "pages": [
+        "events.html",
+        "cake-bake.html",
+        "art-farm.html",
+        "fat-tuesday.html",
+        "sit-downs.html"
+      ]
+    },
+    {
+      "name": "about",
+      "pages": [
+        "about-us.html",
+        "social.html",
+        "contact-us.html",
+        "donations.html",
+        "local-support.html"
+      ]
+    },
+    {
+      "name": "gallery",
+      "pages": [
+        "photo-gallery.html",
+        "treasured-artists.html",
+        "archive.html"
+      ]
+    }
+  ],
+  "footer": {
+    "about": "SOOTS (Sustaining Roots Music) was founded in 2006 to raise awareness and support for aging Piedmont blues musicians through the Music Maker Relief Foundation.",
+    "copyright": "© 2026 Sustaining Roots Music · Raleigh, North Carolina",
+    "tagline": "from our collective soil to our universal soul"
+  }
+}

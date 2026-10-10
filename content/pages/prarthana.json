@@ -1,0 +1,39 @@
+{
+  "title": "Prarthana Kalmath",
+  "description": "A Short Introduction: Bill Ferris' book, \"The South in Color,\" exposes the public to many facets and themes of the South that are hidden in it's roots.…",
+  "kicker": "2017 Folklore Projects",
+  "subtitle": "",
+  "menu_section": "In the Field",
+  "banner_image": "/photos/vibrancies_orig.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "/photos/quilt_orig.jpg",
+    "caption": ""
+  },
+  "facts": [
+    {
+      "label": "Photograph",
+      "value": "“Pecolia Warner and her ‘P’ Quilt”"
+    },
+    {
+      "label": "Credits",
+      "value": "Nina Simone “Wild is the Wind” Instrumental rendering"
+    }
+  ],
+  "intro_heading": "A Short Introduction",
+  "intro": "<p>Bill Ferris' book, \"The South in Color,\" exposes the public to many facets and themes of the South that are hidden in it's roots. The photograph I have chosen to analyze, \"Pecolia Warner and her 'P' Quilt\", similarly expresses a strong theme of community and the power within communal cultural activities such as quilt making. Choosing poetry as my medium to respond to this photograph, I have written a short poem in the style of contemporary African-American poets such as Afaa Michael Weaver in order to play on colors, sounds, words and images to create an  retelling of the effect that quilt making has, not only on a community, but also on an individual.</p>",
+  "poem": {
+    "title": "Vibrancies",
+    "byline": "By: Prarthana Kalmath",
+    "stanzas": [
+      "The pieces that give us a name\nThey fit together\na mosaic of colors\nvibrant threads intertwining on one plane\nscarlet, cerulean blue, and sunshine yellow\nrage, despair, and a happiness, a mellow\nThread of green woven between the others\nA needle as sharp as our gazes\nAnd as tiny as our fears",
+      "I hear the sounds of women\nall with soft hands made rough from our collective work\nOur collective art\nToiling day and night, for the promise of laughter and expression\nwe say routine is not the same,\nwe know that routine has meaning\nwe come together when the dawn of day begins and ending at the lighting of a lamp\nto combat the black strands that weave in from above\nmothers, sisters, daughters, all this doesn’t matter; we are the same\nwe are faceted and powerful\nwe hold the power to create\nthe power to encase our own spirits\nwithin these threads of our quilt"
+    ],
+    "credits": "Nina Simone \"Wild is the Wind\" Instrumental rendering"
+  },
+  "recitation": {
+    "image": "/photos/vibrancies_orig.jpg",
+    "caption": "Hear Poem Recitation by Author",
+    "link": "https://www.youtube.com/watch?v=6Bb0knVvVBY"
+  }
+}

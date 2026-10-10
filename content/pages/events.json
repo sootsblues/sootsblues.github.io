@@ -1,0 +1,47 @@
+{
+  "title": "SOOTS Events",
+  "description": "CAKE BAKE (n) – SOOTS' Annual Fundraiser for Music Maker Relief Foundation, First, SOOTS students bake homemade cakes, then the Raleigh Charter community…",
+  "kicker": "",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/338629940.jpg",
+  "banner_video": "",
+  "events": [
+    {
+      "page": "cake-bake.html",
+      "image": "/photos/soots-cake-bake-may-2010-016.jpeg",
+      "name": "Cake Bake",
+      "part_of_speech": "n",
+      "definition": "SOOTS' Annual Fundraiser for Music Maker Relief Foundation, First, SOOTS students bake homemade cakes, then the Raleigh Charter community eats said cake while enjoying the Art and Music of the Art Farm celebration. Synonyms: Fun-raiser",
+      "stub_top": "May Day",
+      "stub_bottom": "$10"
+    },
+    {
+      "page": "art-farm.html",
+      "image": "/photos/dsc-0982.jpeg",
+      "name": "Art Farm",
+      "part_of_speech": "n",
+      "definition": "a time for the RCHS Community to cultivate a greater appreciation for our homegrown arts; a time for RCHS students – both current and alumni – to display, sell or commission their crafts as they see fit; a time to reconnect and enjoy live music performed by Raleigh Charter students on campus; usually held in conjunction with the annual May Day Cake Bake fundraiser after the spring Community Workday; a time to have fun and celebrate creativity",
+      "stub_top": "Spring",
+      "stub_bottom": "RCHS"
+    },
+    {
+      "page": "fat-tuesday.html",
+      "image": "/photos/img-6120.jpg",
+      "name": "Fat Tuesday",
+      "part_of_speech": "",
+      "definition": "SOOTS celebrated Mardi Gras annually as a fundraiser in the past, affectionately calling it Fat Tuesday. In 2024, we brought this event back.",
+      "stub_top": "Mardi Gras",
+      "stub_bottom": "Gumbo"
+    },
+    {
+      "page": "sit-downs.html",
+      "image": "/photos/20190403135745111_orig.jpg",
+      "name": "Sit Downs",
+      "part_of_speech": "",
+      "definition": "When SOOTS has time on campus, we want to invite others to share a meal and a story or two.",
+      "stub_top": "On campus",
+      "stub_bottom": "RCHS"
+    }
+  ]
+}

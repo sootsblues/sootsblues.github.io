@@ -1,0 +1,38 @@
+{
+  "title": "Soil to Soul Series",
+  "description": "The “Soil to Soul Series” explores the American South’s uniqueness, and we want to share it with as many as will listen.",
+  "kicker": "",
+  "subtitle": "The “Soil to Soul Series” explores the American South’s uniqueness, and we want to share it with as many as will listen.",
+  "menu_section": "",
+  "banner_image": "/photos/1749057201.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "/photos/birdseyeportraits-041720-jsteadman-00367.jpg",
+    "caption": ""
+  },
+  "facts": [],
+  "intro": "<p>Sustaining Roots Music is a collection of students working to benefit the livelihoods of aging musicians and artists in the American South, whether through artistic or financial support. For a long time, part of our goal as a group has been the preservation of local culture. The primary force powering the Soil to Soul Series is high school students at Raleigh Charter High School archiving little pieces of history, as small parts in this large community. Our series is still a work in process but we are proud of the episodes we have created so far.</p>\n<p>The first episode is a recorded series with conversations of our dear friends, Phil Cook and Mother Lena Mae Perry, combined with the element of live music. The second episode is a folklore project about family recipes and traditions in the form of short written pieces and video/audio recordings, closely motivated in relation to the lifelong work of our mentors, Bill and Marcie Cohen Ferris. The third episode is an oral response attached to photography and videography of our recent visit to Music Maker Relief Foundation’s new studio in Fountain, NC.</p>\n<p>We sincerely hope you enjoy our series so far and stay tuned for our next edition.</p>",
+  "episodes": [
+    {
+      "page": "episode-1-this-little-light-of-ours.html",
+      "image": "/photos/birdseyeportraits-041720-jsteadman-00259.jpg",
+      "number": "One",
+      "title": "This Little Light of Ours",
+      "subtitle": "Sister Perry and Phil Cook"
+    },
+    {
+      "page": "episode-2-food-folklore.html",
+      "image": "/photos/screenshot-2025-09-15-at-6-30-24-am.png",
+      "number": "Two",
+      "title": "Food Folklore",
+      "subtitle": ""
+    },
+    {
+      "page": "episode-3-fountain.html",
+      "image": "/photos/img-2760.jpg",
+      "number": "Three",
+      "title": "Fountain",
+      "subtitle": ""
+    }
+  ]
+}

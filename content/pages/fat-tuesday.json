@@ -1,0 +1,75 @@
+{
+  "title": "Fat Tuesday",
+  "description": "In New Orleans, Mardi Gras marks the closing of the pre-Lenten season in the Catholic tradition. In French, Mardi Gras roughly translates to “Fat Tuesday”…",
+  "kicker": "",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/550248416.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "/photos/screenshot-2024-02-04-112136.png",
+    "caption": ""
+  },
+  "facts": [
+    {
+      "label": "2024",
+      "value": "The 100 Hall of Raleigh Charter High School"
+    },
+    {
+      "label": "Films",
+      "value": "Always for Pleasure · Stay Prayed Up"
+    },
+    {
+      "label": "Sponsors",
+      "value": "Larry’s Coffee, Yellow Dog Bakery, Fairway Printing, and Videri Chocolate"
+    }
+  ],
+  "pull_quote": {
+    "text": "",
+    "by": "",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "body": "<p>In New Orleans, Mardi Gras marks the closing of the pre-Lenten season in the Catholic tradition. In French, Mardi Gras roughly translates to “Fat Tuesday” stemming from the usage of all fats and indulgences in a household before Lent in preparation for the abstinence and fasting to come. In modern times, Mardi Gras is a two week party in the streets of New Orleans for tourists and locals alike, as well as a celebration of the melting pot that is New Orleans history and culture. SOOTS celebrated Mardi Gras annually as a fundraiser in the past, affectionately calling it Fat Tuesday. In 2024, we brought this event back as a party in the 100 Hall of Raleigh Charter High School: with homemade gumbo and jambalaya, screenings of Les Blank’s award winning <em>Always for Pleasure</em> and <em>Stay Prayed Up</em>, a documentary about Mother Lena Mae Perry and Phil Cook, followed by a live performance by them. We couldn’t have done it without the help of our sponsors: Larry’s Coffee, Yellow Dog Bakery, Fairway Printing, and Videri Chocolate.</p>"
+    },
+    {
+      "type": "gallery",
+      "photos": [
+        {
+          "image": "/photos/img-6120_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-6121_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-6119_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-6118_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-6124_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-6125_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-6123_orig.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/screenshot-2024-02-04-112136_orig.png",
+          "caption": ""
+        }
+      ]
+    }
+  ]
+}

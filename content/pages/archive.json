@@ -1,0 +1,112 @@
+{
+  "title": "Archive",
+  "description": "Sustaining Roots Music, a Raleigh Charter High School community project supporting Piedmont blues musicians since 2006.",
+  "kicker": "",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/img-7270.jpg",
+  "banner_video": "",
+  "heading": "Past Posters",
+  "poster_groups": [
+    {
+      "title": "SOOTS BluesFest Benefit Concerts",
+      "posters": [
+        {
+          "image": "/photos/screenshot-2025-01-07-8-45-59-am.png",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-7256.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-7257.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-7258.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/fullsizer.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-7260.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/fullsizer-1.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-7262.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-7263.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "title": "May Day Cake Bake and Art Farm",
+      "posters": [
+        {
+          "image": "/photos/img-7268.jpg",
+          "caption": "Woodblock print poster for the 1st annual Cake Bake."
+        },
+        {
+          "image": "/photos/fullsizer-2.jpg",
+          "caption": "Original woodblock print for the 2011 Cake Bake."
+        },
+        {
+          "image": "/photos/img-7274.jpg",
+          "caption": "Woodblock print poster for the 2013 Art Farm."
+        }
+      ]
+    },
+    {
+      "title": "Carolina Piedmont Blues Benefit Concerts",
+      "posters": [
+        {
+          "image": "/photos/img-7264.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-7265.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-7266.jpg",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-7267.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "title": "Fat Tuesday Film and Music Festival",
+      "posters": [
+        {
+          "image": "/photos/img-7269.jpg",
+          "caption": "Poster for the 4th annual Fat Tuesday celebration featuring a photograph of a Mardi Gras float."
+        },
+        {
+          "image": "/photos/img-7270.jpg",
+          "caption": "Poster for the 5th annual Fat Tuesday celebration featuring a photograph of George Higgs by David Holt."
+        },
+        {
+          "image": "/photos/img-7271.jpg",
+          "caption": "Poster for the 7th annual Fat Tuesday celebration featuring a photograph of a Mardi Gras float."
+        },
+        {
+          "image": "/photos/img-7272.jpg",
+          "caption": "Poster for the 2024 Fat Tuesday celebration. "
+        }
+      ]
+    }
+  ]
+}

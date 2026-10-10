@@ -1,0 +1,95 @@
+{
+  "title": "Art Farm",
+  "description": "Art Farm is an event that has been hosted by Sustaining Roots Music community workday at Raleigh Charter High School each spring for the past several…",
+  "kicker": "",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/1365049414.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "/photos/2022-art-farm-1.jpg",
+    "caption": "Art Farm, 2022"
+  },
+  "facts": [
+    {
+      "label": "Looking to sell?",
+      "value": "See or email Mr. Thelen"
+    }
+  ],
+  "pull_quote": {
+    "text": "",
+    "by": "",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "What is Art Farm?"
+    },
+    {
+      "type": "columns",
+      "columns": [
+        {
+          "blocks": []
+        },
+        {
+          "blocks": [
+            {
+              "type": "text",
+              "body": "<p>Art Farm is an event that has been hosted by Sustaining Roots Music community workday at Raleigh Charter High School each spring for the past several years. At this event, students and alumni are invited to sell their homemade artwork and crafts, opening the opportunity to promote local student art in the community and also to spread stories and ideas with their peers. This art is accompanied by music, which is also performed by students and alumni of Raleigh Charter High School. Art Farm is an excellent way to get the community together to celebrate creativity and talent.</p>"
+            },
+            {
+              "type": "gallery",
+              "photos": [
+                {
+                  "image": "/photos/2022-art-farm-1.jpg",
+                  "caption": "Art Farm, 2022"
+                }
+              ]
+            },
+            {
+              "type": "heading",
+              "text": "For Artists:"
+            },
+            {
+              "type": "text",
+              "body": "<p>For Artists:  If you are interested in selling your wares at Art Farm this year, there will be an interest meeting beginning of 2024, either during lunch or immediately after school in the Art Room.  More information about signing up for Art Farm will be sent out later in the school year.</p>"
+            }
+          ]
+        },
+        {
+          "blocks": []
+        }
+      ]
+    },
+    {
+      "type": "columns",
+      "columns": [
+        {
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "When?"
+            },
+            {
+              "type": "text",
+              "body": "<p>The 2025 Art Farm date is still pending, but we will let you all know soon!</p>"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "Looking to Sell?"
+            },
+            {
+              "type": "text",
+              "body": "<p>See or email Mr. Thelen for information on how to become a vendor at Art Farm.</p>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

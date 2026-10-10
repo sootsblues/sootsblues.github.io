@@ -1,0 +1,224 @@
+{
+  "title": "Food Folklore",
+  "description": "In 2024 SOOTS leaders Mia, Kat, and Tommy as well as Lola, Faith, Zora, and Vaughn interviewed their family members and remade recipes that were passed…",
+  "kicker": "Soil to Soul Series · Episode Two",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/1111636163.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "/photos/screenshot-2025-09-15-at-6-31-38-am.png",
+    "caption": ""
+  },
+  "facts": [
+    {
+      "label": "Year",
+      "value": "2024"
+    },
+    {
+      "label": "SOOTS leaders",
+      "value": "Mia, Kat, and Tommy as well as Lola, Faith, Zora, and Vaughn"
+    }
+  ],
+  "pull_quote": {
+    "text": "My grandmother is a door that stands slightly ajar.",
+    "by": "Zora",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "body": "<p><strong> In 2024 SOOTS leaders Mia, Kat, and Tommy as well as Lola, Faith, Zora, and Vaughn interviewed their family members and remade recipes that were passed down across generations. Our Food Folklore Projects are inspired by the work of Bill and Marcie Cohen Ferris, our good friends at UNC's Center for the Study of the American South. Almost all of these students interviewed their grandmothers; many of these recipes being important to their families and/or culturally significant. We have begun the first stage of documenting our Food Folklore Projects––stay tuned! </strong></p>"
+    },
+    {
+      "type": "text",
+      "body": "<h3 class=\"subhead\">Zora&#x27;s Grandmother</h3>"
+    },
+    {
+      "type": "text",
+      "body": "<p>On my family’s Christmas card for 2013, there’s a photo of a 5 year-old me on my great Uncle Nelson Smith’s tractor. You can see the faded red paint contrasting my pale skin and my big teeth with brown curls trailing down the sides of my face. I look happy with my baby brother sitting beside me. I have memories of the land, of the tall grass fluttering past my legs as I ran. My great uncle would sit in his brown leather recliner and watch reruns on the television. There were baked beans, collard greens, the smells of a true Southern experience throughout his home in the tiny town of Mount Gilead. I have come to enjoy the quietness of the town and the sense of community throughout. It’s beautiful, almost ethereal, how peaceful it is.</p>\n<p>All of these things are passed down through the skin and bones of my grandmother, Suetta Smith Kaynor. She’s careful in the way she traverses the land around her house. It’s big and clean, with house plants and two grand pianos. She loves animals; ever since her old cat Rocky died she’s taken to tending other critters. Her neighborhood friends include toads hiding under the leaves near the basement door, snakes that slither through her English ivy, and the occasional spider weaving a web between the brick-laid garage and her tomato plants. She often trades plants with my father, a constant mutualistic relationship where they silently heal the plants the other cannot seem to mend. He brings her firewood in the back of his white Chevrolet truck, and in exchange she gives him homemade pound cake, always found underneath the glass cover of a cake carrier. Many times have I laid in the sheets of her guest room, woken up to Roadrunner and Wile E. Coyote on the TV, and the most important part of this story: her cooking.</p>\n<p>My grandmother is a door that stands slightly ajar. Never will we know the full extent of her past, her story. But I know the parts of her she wants me to know. She holds onto me tight when we see each other, her hand touching the back of my hair. She equates it to the feeling of being on her family’s farm, the wind through her hair the way her fingers run through mine. Her fingers have always been delicate, but never quite as delicate as they are when she’s cooking. It’s apparent in her pork roast, the turkey she makes for Thanksgiving dinners. It shines through in her whole-wheat muffins, in the delicacy of her hands weaving together masterful meals, and the ham she so carefully cooks for us now. That’s how the story begins. Me and my dad, driving to her house, armed with cameras and note-taking materials, ready to watch my grandmother cook a salt-cured ham.</p>"
+    },
+    {
+      "type": "columns",
+      "columns": [
+        {
+          "blocks": [
+            {
+              "type": "video",
+              "file": "/files/video__3__420.mp4",
+              "poster": "/photos/video__3__420.jpg"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "text",
+              "body": "<h3 class=\"subhead\">Listen to Zora&#x27;s project</h3>"
+            },
+            {
+              "type": "audio",
+              "file": "/files/folklore_recording_for_zora-grandmama_copy_2.mp3",
+              "title": "Zora's Grandmother",
+              "subtitle": ""
+            },
+            {
+              "type": "gallery",
+              "photos": [
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-29-29-am.png",
+                  "caption": "From left to right: 5 year-old Zora Montague and 2 year-old Ezekiel Montague, both perched side by side on a rusty red tractor."
+                },
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-29-51-am.png",
+                  "caption": "Directions for cooking a ham, particularly a salt-cured Smithfield ham."
+                },
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-30-00-am.png",
+                  "caption": "Virginia Smith’s house in Mount Gilead, North Carolina. Situated on the plot of land directly next to her son, Nelson’s house."
+                },
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-30-08-am.png",
+                  "caption": "Suetta Smith Kaynor at 3 years old. Kaynor reflects on the photo in a text message to Zora: “You can see the mailbox where my daddy had buried the jar of money to buy Momma her washing machine after World War ll.”"
+                },
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-30-16-am.png",
+                  "caption": "From left to right: Virginia Smith (81), Charles Montague (15), Colleen Vaughn (55), Suetta Montague (45), Margie Allen (82), and Cammie Vaughn (13)."
+                },
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-30-24-am.png",
+                  "caption": "82 year-old Suetta Kaynor prepares her grandmother’s traditional whole-wheat muffin recipe. The recipe has no exact measurements, and is served with molasses and butter."
+                },
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-30-35-am.png",
+                  "caption": "Great-Great Grandma Smith’s whole wheat muffin recipe, written in Virginia Smith’s short-hand."
+                },
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-30-48-am.png",
+                  "caption": "Great Grandma Virginia Smith at 84 years old."
+                },
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-30-58-am.png",
+                  "caption": "From left to right: Charles Montague, 52. Zora Montague, 16. Elizabeth Montague, 51. Suetta Kaynor, 82. Ezekiel Montague, 13. Taken outside of Virginia Smith’s house in Mount Gilead, North Carolina."
+                },
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-31-26-am.png",
+                  "caption": "From left to right: Suetta Kaynor, 82. Nelson Smith, 94. Taken inside Nelson’s house on Thanksgiving."
+                },
+                {
+                  "image": "/photos/screenshot-2025-09-15-at-6-31-38-am.png",
+                  "caption": "Suetta Kaynor and 6 year-old Zora Montague cook together for the first time. The recipe comes from The Winnie The Pooh Cookbook, a Christmas gift from Zora’s father."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "body": "<h3 class=\"subhead\">More Food Folklore Project by SOOTS Students</h3>"
+    },
+    {
+      "type": "text",
+      "body": "<h3 class=\"subhead\">Faith&#x27;s Grandmother&#x27;s (BigMama) Teacakes</h3>"
+    },
+    {
+      "type": "columns",
+      "columns": [
+        {
+          "blocks": [
+            {
+              "type": "text",
+              "body": "<p>Faith: Barbara Ann Marks is the mother of my father, Rodney Obaigbena. Her mother, my great grandmother, also known as “BigMama,” is the creator of the Teacake recipe, in addition to her BigMama Gumbo recipe. Barbara was influenced by several of her mother’s hobbies like reading and cooking and loves to cook and bake her recipes. When Barbara was old enough, BigMama taught her the Teacake recipe.</p>\n<p>This food project focuses specifically on Barbara’s experience with BigMama’s Teacake recipe.</p>"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "heading",
+              "text": "Listen to Faith's Project:"
+            },
+            {
+              "type": "audio",
+              "file": "/files/teacakesfoodproject-jan15th2024.mp3",
+              "title": "Faith's Grandmother's (BigMama) Teacakes",
+              "subtitle": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "body": "<h3 class=\"subhead\">Lola&#x27;s mother&#x27;s vegetable pie</h3>"
+    },
+    {
+      "type": "columns",
+      "columns": [
+        {
+          "blocks": [
+            {
+              "type": "text",
+              "body": "<p>Lola: This interview was conducted between Lola Patel and her mom, Samantha Patel. Samantha is from Stoke on Trent, England originally but moved to the US 27 years ago. This gives her a unique perspective on food by bridging two cultures and raising children in this mix. This interview delves into the ties with childhood, economic standing, and of course balancing culture through your consumption of food. This interview straddles several cultures and focuses on the difficulties and strengths of balancing them. The impact of history on food is also highlighted as certain dishes in Samantha's diet originally came from World War ll and the rationing and scarcity of food at the time.</p>"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "text",
+              "body": "<h3 class=\"subhead\">Listen to Lola&#x27;s Project</h3>"
+            },
+            {
+              "type": "audio",
+              "file": "/files/soot1.mp3",
+              "title": "Lola's mother's vegetable pie",
+              "subtitle": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "body": "<h3 class=\"subhead\">Tommy&#x27;s grandmother (amma)</h3>"
+    },
+    {
+      "type": "columns",
+      "columns": [
+        {
+          "blocks": [
+            {
+              "type": "text",
+              "body": "<p><strong>Tommy: </strong>My Grandmother grew up in Indiana as the youngest of five children by a wide margin, so in a way she was raised kind of like an only child. She used to help her mother in the kitchen as a child. Amma said that she always enjoyed doing it, largely because she liked spending time with her mother, considering her siblings were much older than her and some had even moved out at the point. After school, she would help her mother cook some of the family recipes. The aspect of cooking with her mother that she didn’t like was she would always be the one who took the meat or other food down to the basement to put it in the furnace. She told me that she was terrified of her basement. She would take a while to build up the courage to go down into the basement and would always rush back up afterwards. When she grew up, she entered a convent to become a nun, however she met my grandfather and married him instead. As a wife and mother, Amma did the vast majority of the cooking in the house, although I’ve heard stories of failed attempts at cooking from my grandfather and how, on the occasion that he had to cook, he would just end up making tomato soup and grilled cheese. My Amma, on the other hand, was a very good cook as I know from all the meals she has made for me. One of my favorite dishes she makes is a side dish of summer squash and zucchini, fried in a pan with a little bit of oil and cheese.</p>"
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "text",
+              "body": "<h3 class=\"subhead\">Listen to Tommy&#x27;s Project</h3>"
+            },
+            {
+              "type": "audio",
+              "file": "/files/tommyfoodproject.mp3",
+              "title": "Tommy's grandmother (amma)",
+              "subtitle": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "body": "<h3 class=\"subhead\">Kat&#x27;s grandmother</h3>"
+    },
+    {
+      "type": "text",
+      "body": "<p>Kat: I had the privilege of interviewing my grandmother about her unique Russian-Korean-Uzbek heritage, tracing its complex origins back to the aftermath of the Russo-Japanese War. She vividly recounted the harrowing conditions her grandparents endured, forced to relocate and adapt to new environments due to the war's tumultuous effects. This historical upheaval led to a fascinating blend of cultures that is distinctly reflected in the foods we enjoy today. My grandmother spoke passionately about traditional dishes like kimchi, plov, and pirozhki, each representing a piece of our multicultural heritage. She described how her spicy kimchi, a staple of Korean cuisine, sits alongside her cumin-filled plov, an Uzbek rice dish, on our family table, while pirozhki, a Russian meat pastry, adds a touch of earthiness. Through her stories, I gained a profound appreciation for our rich and diverse culinary traditions, which serve as a testament to our family's resilience.</p>"
+    }
+  ]
+}

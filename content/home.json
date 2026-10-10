@@ -1,0 +1,266 @@
+{
+  "description": "SOOTS (Sustaining Roots Music) was founded in 2006 to raise awareness and support for aging Piedmont blues musicians through the Music Maker Relief Foundation.",
+  "slideshow": [
+    {
+      "image": "/photos/soots-philcook-sisterperry-rchs-040919-183.jpg",
+      "caption": "Sister Lena Mae Perry and Phil Cook’s visit to Raleigh Charter High School, April 9, 2019"
+    },
+    {
+      "image": "/photos/1483255769.jpg",
+      "caption": ""
+    },
+    {
+      "image": "/photos/2139535214.jpg",
+      "caption": ""
+    },
+    {
+      "image": "/photos/29.jpg",
+      "caption": ""
+    },
+    {
+      "image": "/photos/sister-perry-fall-2018-for-pc.jpg",
+      "caption": "Sister Lena Mae Perry, fall 2018"
+    },
+    {
+      "image": "/photos/1365049414.jpg",
+      "caption": ""
+    },
+    {
+      "image": "/photos/pat-mother-blues-cohen.jpg",
+      "caption": "Pat “Mother Blues” Cohen"
+    },
+    {
+      "image": "/photos/317718502.jpg",
+      "caption": ""
+    },
+    {
+      "image": "/photos/soots-in-hillsborough-with-sister-perry-and-denise-duffy-of-mmrf-may-2019-1.jpeg",
+      "caption": "SOOTS in Hillsborough with Sister Perry and Denise Duffy of Music Maker Relief Foundation, May 2019"
+    },
+    {
+      "image": "/photos/montague-photo.png",
+      "caption": ""
+    }
+  ],
+  "since": "since 2006",
+  "title": "Sustaining Roots Music",
+  "subtitle": "a Raleigh Charter Community Project",
+  "buttons": [
+    {
+      "label": "SOOTS Origins",
+      "link": "about-us.html"
+    },
+    {
+      "label": "Music Maker Foundation",
+      "link": "https://www.musicmaker.org/"
+    }
+  ],
+  "intro": "<p>SOOTS (Sustaining Roots Music) was founded in 2006 to raise awareness and support for aging Piedmont blues musicians through the Music Maker Relief Foundation.</p>\n<p>What began with student-led fundraisers like the Fat Tuesday Feastival and May Day Cake Bake soon grew into annual benefit concerts in downtown Raleigh featuring Music Maker artists and friends. Along the way, SOOTS partnered with Center for the Study of the American South to connect hands-on social entrepreneurship with the study of Southern music, folklore, and regional traditions. Rooted in music, community, and cultural stewardship, SOOTS continues to support artists while learning from and giving back to the traditions that inspired it in the first place.</p>",
+  "motto": "“…from our collective soil to our universal soul.”",
+  "scrapbook": [
+    {
+      "image": "/photos/fat-tuesday-2006.jpg",
+      "caption": "Fat Tuesday, 2006"
+    },
+    {
+      "image": "/photos/cake-bake-2012.jpg",
+      "caption": "Cake Bake, 2012"
+    },
+    {
+      "image": "/photos/johnd.png",
+      "caption": "John Dee Holeman"
+    }
+  ],
+  "showcase": {
+    "heading": "SOOTS Showcase",
+    "cards": [
+      {
+        "page": "events.html",
+        "image": "/photos/cake-bake-2024-1.jpg",
+        "title": "SOOTS Events",
+        "text": "Connect the Raleigh Charter Community to Music Maker Musicians through all sorts of performances and fundraisers!",
+        "link_label": "Events Page"
+      },
+      {
+        "page": "soil-to-soul-series.html",
+        "image": "/photos/birdseyeportraits-041720-jsteadman-00316.jpg",
+        "title": "Soil to Soul Series",
+        "text": "The “Soil to Soul Series” explores the American South’s uniqueness, and we want to share it with as many as will listen.",
+        "link_label": "Listen"
+      },
+      {
+        "page": "folk-projects.html",
+        "image": "/photos/hwy-61_orig.jpg",
+        "title": "SOOTS Folklore",
+        "text": "Students study, research, and present special projects on folklore and American Southern studies.",
+        "link_label": "Folk Projects"
+      }
+    ]
+  },
+  "timeline": {
+    "heading": "Since 2006",
+    "entries": [
+      {
+        "year": "2006",
+        "image": "/photos/fat-tuesday-2006.jpg",
+        "caption": "Fat Tuesday, 2006",
+        "text": "So in 2006, 15 students and I developed Sustaining Roots Music (SOOTS) and memorable fundraising events on campus.",
+        "page": "about-us.html"
+      },
+      {
+        "year": "2007",
+        "image": "/photos/dom-flemmons-sittin-in-at-1st-anual-2007-2.jpg",
+        "caption": "Dom Flemmons sittin' in at the 1st annual, 2007",
+        "text": "By 2007, we had enough in the bank to hire John Dee Holeman and Tim Duffy to play our first benefit concert.",
+        "page": "about-us.html"
+      },
+      {
+        "year": "2008",
+        "image": "/photos/4-05-08-2nd-annual-george-higgs-lets-loose.jpg",
+        "caption": "George Higgs lets loose at the 2nd annual benefit, 2008",
+        "text": "2nd annual: George Higgs lets loose.",
+        "page": "treasured-artists.html"
+      },
+      {
+        "year": "2013",
+        "image": "/photos/reed-turchi-plays-gospel-at-7th-annual-in-2013.jpg",
+        "caption": "Reed Turchi plays gospel at the 7th annual, 2013",
+        "text": "Reed Turchi plays gospel at the 7th annual.",
+        "page": "treasured-artists.html"
+      },
+      {
+        "year": "2014",
+        "image": "/photos/justin-robinson-and-his-harp-visit-c-2014.jpg",
+        "caption": "Justin Robinson and his harp visit, c. 2014",
+        "text": "In 2014 we held our final Blues Revue Benefit concert, but SOOTS continues to raise money for Music Maker and to bring artists into our classroom.",
+        "page": "about-us.html"
+      },
+      {
+        "year": "2016",
+        "image": "/photos/a4arskneghxwcko2necmtal4zivxo581rylvkcmi-wtkkbojct4go01ctgmnauqaprzkwq-s2048_orig.jpg",
+        "caption": "",
+        "text": "The SOOTS class of 2016 followed their love of food to research, photograph and film four distinct stories of our local Southern Foodways.",
+        "page": "2016.html"
+      },
+      {
+        "year": "2017",
+        "image": "/photos/hwy-61_orig.jpg",
+        "caption": "",
+        "text": "In 2017, students chose to respond artistically to Bill Ferris' photography from “The South in Color.”",
+        "page": "2017.html"
+      },
+      {
+        "year": "2018",
+        "image": "/photos/sister-perry-fall-2018-for-pc.jpg",
+        "caption": "Sister Lena Mae Perry, fall 2018",
+        "text": "Sister Lena Mae Perry first played in our classroom in the fall of 2018.",
+        "page": "episode-1-this-little-light-of-ours.html"
+      },
+      {
+        "year": "2024",
+        "image": "/photos/img-6120.jpg",
+        "caption": "",
+        "text": "In 2024, we brought this event back as a party in the 100 Hall of Raleigh Charter High School.",
+        "page": "fat-tuesday.html"
+      },
+      {
+        "year": "2026",
+        "image": "/photos/7924224.jpg",
+        "caption": "",
+        "text": "The Macon Farm, a documentary by Nathan Bradshaw & Mason Oehlrich. Coming soon.",
+        "page": "2026.html"
+      }
+    ]
+  },
+  "musicians": {
+    "lead": "In the decade since, we've worked closely with a long list of wonderful musicians, including",
+    "names": [
+      "John Dee Holeman",
+      "Tim Duffy",
+      "Dom Flemmons",
+      "George Higgs",
+      "Boo Hanks",
+      "Lightnin' Wells",
+      "Harvey Dalton Arnold",
+      "Tad Walters",
+      "Bubba Norwood",
+      "Big Ron Hunter",
+      "Ironing Board Sam",
+      "Reed Turchi",
+      "Justin Robinson & the Mary Annettes"
+    ]
+  },
+  "listen": {
+    "heading": "Soil to Soul Series",
+    "tracks": [
+      {
+        "file": "/files/folklore_recording_for_zora-grandmama_copy_2.mp3",
+        "title": "Zora's Grandmother"
+      },
+      {
+        "file": "/files/teacakesfoodproject-jan15th2024.mp3",
+        "title": "Faith's Grandmother's (BigMama) Teacakes"
+      }
+    ]
+  },
+  "posters": {
+    "heading": "Past Posters",
+    "link_label": "Archive →",
+    "images": [
+      "/photos/img-7268.jpg",
+      "/photos/img-7270.jpg",
+      "/photos/screenshot-2025-01-07-8-45-59-am.png",
+      "/photos/img-7256.jpg",
+      "/photos/img-7264.jpg",
+      "/photos/img-7272.jpg",
+      "/photos/img-7257.jpg",
+      "/photos/fullsizer-2.jpg",
+      "/photos/img-7265.jpg",
+      "/photos/img-7269.jpg",
+      "/photos/img-7260.jpg",
+      "/photos/img-7274.jpg",
+      "/photos/img-7266.jpg",
+      "/photos/img-7271.jpg"
+    ]
+  },
+  "partners": {
+    "heading": "We wouldn’t be here without these friends",
+    "link_label": "Local Support →",
+    "logos": [
+      {
+        "image": "/photos/pinecone.png",
+        "link": "https://pinecone.org/",
+        "name": "PineCone"
+      },
+      {
+        "image": "/photos/unc-csas-blk-small.jpg",
+        "link": "https://south.unc.edu/",
+        "name": "UNC Center for the Study of the American South"
+      },
+      {
+        "image": "/photos/775740301.jpg",
+        "link": "https://fairwayprintingofnc.com/",
+        "name": "Fairway Printing"
+      },
+      {
+        "image": "/photos/musicmakerlogo.png",
+        "link": "https://www.musicmaker.org/",
+        "name": "Music Maker Foundation"
+      }
+    ]
+  },
+  "help": {
+    "heading": "How Can You Help?",
+    "text": "SOOTS is always looking for funding to keep the good work that we have started going, and will accept charitable donations at any time.",
+    "buttons": [
+      {
+        "label": "Donations",
+        "link": "donations.html"
+      },
+      {
+        "label": "Contact Us",
+        "link": "contact-us.html"
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+# Python packages for building the site (GitHub installs these automatically)
+Pillow==12.0.0
+# only for tools/check_editor_config.py
+PyYAML==6.0.3

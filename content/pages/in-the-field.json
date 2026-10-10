@@ -1,0 +1,37 @@
+{
+  "title": "In the Field",
+  "description": "In the field is where we want to be as often as possible.",
+  "kicker": "",
+  "subtitle": "In the field is where we want to be as often as possible.",
+  "menu_section": "",
+  "banner_image": "/photos/1483255769.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "/photos/soots-in-hillsborough-with-sister-perry-and-denise-duffy-of-mmrf-may-2019.jpeg",
+    "caption": "SOOTS in Hillsborough with Sister Perry and Denise Duffy of Music Maker Relief Foundation, May 2019"
+  },
+  "facts": [],
+  "pull_quote": {
+    "text": "In the field is where we want to be as often as possible.",
+    "by": "",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "body": "<p>SOOTS aspires to seize opportunities annually to learn together off-campus. Gracious invitations to attend lectures, readings, recitals, panel discussions, exhibit openings and private performances have allowed SOOTS students to experience the rich diversity of folk studies that too often are foreign to the average secondary school student. In 2007 we first visited Tim and Denise Duffy's home offices of Music Maker to stamp and stuff envelopes and since we've organized panels and performances at UNC's Love House, sat with Bela Fleck and the Preservation Hall Jazz Band, toured the Southern Folklife Collection and delivered medical-mini grants to beloved and cherished musicians we consider friends. In the field is where we want to be as often as possible.</p>"
+    }
+  ],
+  "cards": [
+    {
+      "page": "soil-to-soul-series.html",
+      "image": "/photos/birdseyeportraits-041720-jsteadman-00348.jpg",
+      "title": "Soil to Soul"
+    },
+    {
+      "page": "folk-projects.html",
+      "image": "/photos/hwy-61_orig.jpg",
+      "title": "Folk Projects"
+    }
+  ]
+}

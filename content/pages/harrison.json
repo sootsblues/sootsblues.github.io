@@ -1,0 +1,34 @@
+{
+  "title": "Harrison",
+  "description": "Sustaining Roots Music, a Raleigh Charter High School community project supporting Piedmont blues musicians since 2006.",
+  "kicker": "2017 Folklore Projects",
+  "subtitle": "",
+  "menu_section": "In the Field",
+  "banner_image": "/photos/img-3085_orig.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "",
+    "caption": ""
+  },
+  "facts": [],
+  "pull_quote": {
+    "text": "",
+    "by": "",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "gallery",
+      "photos": [
+        {
+          "image": "/photos/tractor-orig_orig.png",
+          "caption": ""
+        },
+        {
+          "image": "/photos/img-3085_orig.jpg",
+          "caption": ""
+        }
+      ]
+    }
+  ]
+}

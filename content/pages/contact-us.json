@@ -1,0 +1,23 @@
+{
+  "title": "Contact Us",
+  "description": "We will get back to you within 1-2 business weeks!",
+  "kicker": "",
+  "subtitle": "We will get back to you within 1-2 business weeks!",
+  "menu_section": "",
+  "banner_image": "/photos/2139535214.jpg",
+  "banner_video": "",
+  "heading": "Contact Us",
+  "intro": "In the meantime, check out our <a href=\"soil-to-soul-series.html\">podcasts</a>, <a href=\"events.html\">events</a>, and <a href=\"folk-projects.html\">projects</a>!",
+  "emails": [
+    {
+      "label": "Email",
+      "address": "sootsblues@gmail.com"
+    },
+    {
+      "label": "Charles Montague",
+      "address": "cmontague@raleighcharterhs.org"
+    }
+  ],
+  "address": "Raleigh Charter High School\nRaleigh, North Carolina",
+  "show_map": true
+}

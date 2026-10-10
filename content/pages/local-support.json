@@ -1,0 +1,67 @@
+{
+  "title": "Local Support",
+  "description": "When SOOTS was raising sponsorship and patronage support for benefit concerts, we came to know dozens of kind folk who were patient with our inexperience…",
+  "kicker": "",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/1610428400.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "",
+    "caption": ""
+  },
+  "facts": [],
+  "blocks": [
+    {
+      "type": "text",
+      "body": "<p>When SOOTS was raising sponsorship and patronage support for benefit concerts, we came to know dozens of kind folk who were patient with our inexperience and generous with their wisdom. Local printers, pizzerias, professors, florists, chocolatiers, documentary filmmakers, shop-owners, artists, alumni, activists and archivists have opened their arms and wallets to our causes, which are many. To support SOOTS has meant that one is investing in several communities at once: folk artists and folklorists, young student-organizers and old time musicians, community-oriented local business and community making mentors, and the bit of magic that happens when all learn of one another and work together to help aged musicians feel a little younger.</p>"
+    }
+  ],
+  "logos": [
+    {
+      "image": "/photos/musicmakerlogo_1.gif",
+      "name": "Music Maker Foundation",
+      "link": "https://musicmaker.org/"
+    },
+    {
+      "image": "/photos/sfa-logo.png",
+      "name": "Southern Foodways Alliance",
+      "link": ""
+    },
+    {
+      "image": "/photos/phlogo-lores.jpg",
+      "name": "Preservation Hall",
+      "link": "http://www.preservationhalljazzband.com/"
+    },
+    {
+      "image": "/photos/pinecone-icon_2.png",
+      "name": "PineCone",
+      "link": "https://www.pinecone.org/"
+    },
+    {
+      "image": "/photos/csas-logo_orig.jpg",
+      "name": "UNC Center for the Study of the American South",
+      "link": "http://south.unc.edu/"
+    },
+    {
+      "image": "/photos/yellow-dog-logo-small-final.webp",
+      "name": "Yellow Dog Bakery",
+      "link": ""
+    },
+    {
+      "image": "/photos/larrys-coffee-460x-2x.webp",
+      "name": "Larry's Coffee",
+      "link": ""
+    },
+    {
+      "image": "/photos/images.png",
+      "name": "",
+      "link": ""
+    },
+    {
+      "image": "/photos/fairway-invoice-header-1024x320.jpg",
+      "name": "Fairway Printing",
+      "link": ""
+    }
+  ]
+}

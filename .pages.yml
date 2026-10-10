@@ -1,0 +1,1730 @@
+# Pages CMS settings: what students see when they edit the site at https://app.pagescms.org
+# Docs: https://pagescms.org/docs/configuration/
+#
+# Each entry below matches a file in content/. If you add a new field to build.py, add it
+# here too, then run: python3 tools/check_editor_config.py
+# Never set custom domains here; see docs/SETUP.md for the website address.
+
+media:
+- name: photos
+  label: Photos
+  input: content/photos
+  output: /photos
+  categories:
+  - image
+  rename: safe
+- name: files
+  label: Audio, video and PDFs
+  input: content/files
+  output: /files
+  categories:
+  - audio
+  - video
+  - document
+  rename: safe
+components:
+  photo:
+    type: object
+    label: Photo
+    fields:
+    - name: image
+      label: Photo
+      type: image
+      options:
+        media: photos
+    - name: caption
+      label: Caption
+      type: string
+      description: Who is in the photo? Names help visitors and future students.
+  heading_section:
+    type: object
+    label: Heading
+    fields:
+    - name: text
+      label: Heading
+      type: string
+  text_section:
+    type: object
+    label: Text
+    fields:
+    - name: body
+      label: Text
+      type: rich-text
+      options:
+        format: html
+        media: false
+  photo_section:
+    type: object
+    label: Photo
+    fields:
+    - name: image
+      label: Photo
+      type: image
+      options:
+        media: photos
+    - name: caption
+      label: Caption
+      type: string
+      description: Who is in the photo? Names help visitors and future students.
+    - name: link
+      label: Link (optional)
+      type: string
+      description: Leave empty to open the photo larger when clicked. A page on this site, like cake-bake.html, or a full
+        web address starting with https://
+  gallery_section:
+    type: object
+    label: Photo gallery
+    fields:
+    - name: photos
+      label: Photos
+      component: photo
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{caption}'
+  button_section:
+    type: object
+    label: Button
+    fields:
+    - name: label
+      label: Button text
+      type: string
+    - name: link
+      label: Link
+      type: string
+      description: A page on this site, like cake-bake.html, or a full web address starting with https://
+  embed_section:
+    type: object
+    label: YouTube or SoundCloud
+    fields:
+    - name: url
+      label: Link
+      type: string
+      description: Paste the YouTube or SoundCloud address.
+  audio_section:
+    type: object
+    label: Audio player
+    fields:
+    - name: file
+      label: Audio file (MP3)
+      type: file
+      options:
+        media: files
+    - name: title
+      label: Title
+      type: string
+    - name: subtitle
+      label: Subtitle (optional)
+      type: string
+  video_section:
+    type: object
+    label: Video file
+    fields:
+    - name: file
+      label: Video file (MP4)
+      type: file
+      options:
+        media: files
+    - name: poster
+      label: Still photo shown before it plays (optional)
+      type: image
+      options:
+        media: photos
+  contact_form_section:
+    type: object
+    label: Contact form
+    fields:
+    - name: note
+      label: Note
+      type: string
+      description: This section shows the contact form. Nothing to fill in.
+      readonly: true
+  bibliography_section:
+    type: object
+    label: Bibliography
+    fields:
+    - name: items
+      label: Sources
+      type: string
+      list: true
+  column_content:
+    type: block
+    label: Column content
+    list: true
+    blockKey: type
+    blocks:
+    - name: heading
+      label: Heading
+      component: heading_section
+    - name: text
+      label: Text
+      component: text_section
+    - name: photo
+      label: Photo
+      component: photo_section
+    - name: gallery
+      label: Photo gallery
+      component: gallery_section
+    - name: button
+      label: Button
+      component: button_section
+    - name: embed
+      label: YouTube or SoundCloud
+      component: embed_section
+    - name: audio
+      label: Audio player
+      component: audio_section
+    - name: video
+      label: Video file
+      component: video_section
+    - name: contact_form
+      label: Contact form
+      component: contact_form_section
+    - name: bibliography
+      label: Bibliography
+      component: bibliography_section
+  columns_section:
+    type: object
+    label: Side-by-side columns
+    fields:
+    - name: columns
+      label: Columns
+      type: object
+      description: Each column holds its own sections. On phones the columns stack.
+      fields:
+      - name: blocks
+        label: Column content
+        component: column_content
+      list:
+        collapsible:
+          collapsed: true
+          summary: Column {index}
+  page_sections:
+    type: block
+    label: Page sections
+    list: true
+    blockKey: type
+    blocks:
+    - name: heading
+      label: Heading
+      component: heading_section
+    - name: text
+      label: Text
+      component: text_section
+    - name: photo
+      label: Photo
+      component: photo_section
+    - name: gallery
+      label: Photo gallery
+      component: gallery_section
+    - name: button
+      label: Button
+      component: button_section
+    - name: embed
+      label: YouTube or SoundCloud
+      component: embed_section
+    - name: audio
+      label: Audio player
+      component: audio_section
+    - name: video
+      label: Video file
+      component: video_section
+    - name: contact_form
+      label: Contact form
+      component: contact_form_section
+    - name: bibliography
+      label: Bibliography
+      component: bibliography_section
+    - name: columns
+      label: Side-by-side columns
+      component: columns_section
+content:
+- name: home
+  label: Home page
+  type: file
+  path: content/home.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: description
+    label: Search description
+    type: text
+  - name: slideshow
+    label: Slideshow photos
+    component: photo
+    description: The big photos at the top. Captions show in the corner.
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{caption}'
+  - name: since
+    label: Small line above the title
+    type: string
+  - name: title
+    label: Title
+    type: string
+  - name: subtitle
+    label: Line under the title
+    type: string
+  - name: buttons
+    label: Buttons
+    type: object
+    fields:
+    - name: label
+      label: Button text
+      type: string
+    - name: link
+      label: Link
+      type: string
+      description: A page on this site, like cake-bake.html, or a full web address starting with https://
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{label}'
+  - name: intro
+    label: Introduction
+    type: rich-text
+    options:
+      format: html
+      media: false
+  - name: motto
+    label: Motto (handwritten line)
+    type: string
+  - name: scrapbook
+    label: Scrapbook photos
+    component: photo
+    description: Three photos beside the introduction.
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{caption}'
+  - name: showcase
+    label: Showcase
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: cards
+      label: Cards
+      type: object
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: text
+        label: Text
+        type: text
+      - name: image
+        label: Photo
+        type: image
+        options:
+          media: photos
+      - name: page
+        label: Page
+        type: string
+        description: A page on this site, like cake-bake.html, or a full web address starting with https://
+      - name: link_label
+        label: Link text
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+  - name: timeline
+    label: Timeline
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: entries
+      label: Years
+      type: object
+      description: Oldest first.
+      fields:
+      - name: year
+        label: Year
+        type: string
+      - name: text
+        label: Text
+        type: text
+      - name: image
+        label: Photo
+        type: image
+        options:
+          media: photos
+      - name: caption
+        label: Caption
+        type: string
+        description: Who is in the photo? Names help visitors and future students.
+      - name: page
+        label: Page
+        type: string
+        description: A page on this site, like cake-bake.html, or a full web address starting with https://
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{year}'
+  - name: musicians
+    label: Musicians list
+    type: object
+    fields:
+    - name: lead
+      label: Lead-in sentence
+      type: string
+    - name: names
+      label: Names
+      type: string
+      list: true
+  - name: listen
+    label: Listen section
+    type: object
+    description: The Soil to Soul episodes shown here come from the Soil to Soul Series page.
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: tracks
+      label: Audio players
+      type: object
+      fields:
+      - name: file
+        label: Audio file (MP3)
+        type: file
+        options:
+          media: files
+      - name: title
+        label: Title
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+  - name: posters
+    label: Poster strip
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: link_label
+      label: Link text
+      type: string
+    - name: images
+      label: Posters
+      type: image
+      options:
+        media: photos
+      list: true
+  - name: partners
+    label: Partners
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: link_label
+      label: Link text
+      type: string
+    - name: logos
+      label: Logos
+      type: object
+      fields:
+      - name: image
+        label: Logo
+        type: image
+        options:
+          media: photos
+      - name: name
+        label: Name
+        type: string
+      - name: link
+        label: Link
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{name}'
+  - name: help
+    label: How can you help?
+    type: object
+    fields:
+    - name: heading
+      label: Heading
+      type: string
+    - name: text
+      label: Text
+      type: text
+    - name: buttons
+      label: Buttons
+      type: object
+      fields:
+      - name: label
+        label: Button text
+        type: string
+      - name: link
+        label: Link
+        type: string
+        description: A page on this site, like cake-bake.html, or a full web address starting with https://
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{label}'
+- name: pages
+  label: Pages
+  type: collection
+  path: content/pages
+  format: json
+  subfolders: false
+  exclude:
+  - 2026.json
+  - archive.json
+  - contact-us.json
+  - donations.json
+  - episode-3-fountain.json
+  - events.json
+  - folk-projects.json
+  - in-the-field.json
+  - local-support.json
+  - prarthana.json
+  - social.json
+  - soil-to-soul-series.json
+  operations:
+    rename: false
+    delete: false
+  filename:
+    template: '{primary}.json'
+    field: create
+  view:
+    primary: title
+    fields:
+    - title
+    sort:
+    - title
+  fields:
+  - name: title
+    label: Page title
+    type: string
+    description: The big heading at the top of the page.
+    required: true
+  - name: description
+    label: Search description
+    type: text
+    description: One or two sentences that Google and social media show for this page.
+  - name: kicker
+    label: Small label above the title
+    type: string
+    description: Optional. Leave empty to show the menu section, like “Events”.
+  - name: subtitle
+    label: Line under the title
+    type: string
+    description: Optional.
+  - name: menu_section
+    label: Menu section
+    type: string
+    description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the Field.'
+  - name: banner_image
+    label: Banner photo
+    type: image
+    description: The wide photo behind the title.
+    options:
+      media: photos
+  - name: banner_video
+    label: Banner video
+    type: file
+    description: Optional. A short silent video that plays behind the title instead of the photo.
+    options:
+      media: files
+  - name: sidebar_photo
+    label: Side photo
+    component: photo
+    description: Optional photo beside the text.
+  - name: facts
+    label: “At a glance” box
+    type: object
+    description: Optional short facts shown beside the text.
+    fields:
+    - name: label
+      label: Label
+      type: string
+    - name: value
+      label: Text
+      type: string
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{label}'
+  - name: pull_quote
+    label: Pull quote
+    type: object
+    description: Optional. Copy a sentence from this page's text to show it large. It only appears if the same words are in
+      the text.
+    fields:
+    - name: text
+      label: Quote
+      type: text
+    - name: by
+      label: Said by (optional)
+      type: string
+    - name: after_paragraph
+      label: Show after paragraph number
+      type: number
+  - name: blocks
+    label: Page sections
+    component: page_sections
+    description: The page, from top to bottom. Add text, photos, galleries, buttons and more.
+- name: special
+  label: Special pages
+  type: group
+  items:
+  - name: '2026'
+    label: '2026: The Macon Farm page'
+    type: file
+    path: content/pages/2026.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: sidebar_photo
+      label: Side photo
+      component: photo
+      description: Optional photo beside the text.
+    - name: facts
+      label: “At a glance” box
+      type: object
+      description: Optional short facts shown beside the text.
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: value
+        label: Text
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{label}'
+    - name: documentary
+      label: Documentary
+      type: object
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: byline
+        label: Byline
+        type: string
+      - name: text
+        label: Text
+        type: text
+      - name: note
+        label: Note (optional)
+        type: string
+      - name: video
+        label: Video file (MP4)
+        type: file
+        options:
+          media: files
+      - name: poster
+        label: Still photo shown before it plays (optional)
+        type: image
+        options:
+          media: photos
+  - name: archive
+    label: Archive (posters) page
+    type: file
+    path: content/pages/archive.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: heading
+      label: Heading
+      type: string
+    - name: poster_groups
+      label: Poster groups
+      type: object
+      description: Each group gets a filter button.
+      fields:
+      - name: title
+        label: Group name
+        type: string
+      - name: posters
+        label: Posters
+        component: photo
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{caption}'
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+  - name: contact_us
+    label: Contact Us page
+    type: file
+    path: content/pages/contact-us.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: heading
+      label: Heading
+      type: string
+    - name: intro
+      label: Text under the heading
+      type: rich-text
+      options:
+        format: html
+        media: false
+    - name: emails
+      label: Email addresses
+      type: object
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: address
+        label: Email address
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{label}'
+    - name: address
+      label: Postal address
+      type: text
+      description: One line per row.
+    - name: show_map
+      label: Show map
+      type: boolean
+  - name: donations
+    label: Donations page
+    type: file
+    path: content/pages/donations.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: heading
+      label: Heading
+      type: string
+    - name: intro
+      label: Introduction
+      type: text
+    - name: cards
+      label: Cards
+      type: object
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: photo
+        label: Photo (optional)
+        type: image
+        options:
+          media: photos
+      - name: items
+        label: Paragraphs
+        type: object
+        fields:
+        - name: text
+          label: Text
+          type: text
+        - name: button_label
+          label: Button text (optional)
+          type: string
+        - name: button_link
+          label: Button link (optional)
+          type: string
+          description: An email link like mailto:name@school.org, or a page or web address.
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{button_label}'
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+  - name: episode_3_fountain
+    label: 'Episode 3: Fountain page'
+    type: file
+    path: content/pages/episode-3-fountain.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: sidebar_photo
+      label: Side photo
+      component: photo
+      description: Optional photo beside the text.
+    - name: facts
+      label: “At a glance” box
+      type: object
+      description: Optional short facts shown beside the text.
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: value
+        label: Text
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{label}'
+    - name: pull_quote
+      label: Pull quote
+      type: object
+      description: Optional. Copy a sentence from this page's text to show it large. It only appears if the same words are
+        in the text.
+      fields:
+      - name: text
+        label: Quote
+        type: text
+      - name: by
+        label: Said by (optional)
+        type: string
+      - name: after_paragraph
+        label: Show after paragraph number
+        type: number
+    - name: blocks
+      label: Page sections
+      component: page_sections
+      description: The page, from top to bottom. Add text, photos, galleries, buttons and more.
+    - name: photos
+      label: Photographs
+      component: photo
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{caption}'
+    - name: letter
+      label: Thank-you letter
+      type: object
+      fields:
+      - name: greeting
+        label: Greeting
+        type: string
+      - name: paragraphs
+        label: Paragraphs
+        type: text
+        list: true
+      - name: closing
+        label: Closing
+        type: string
+      - name: signed
+        label: Signed
+        type: string
+  - name: events
+    label: Events page
+    type: file
+    path: content/pages/events.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: events
+      label: Events
+      type: object
+      description: Each event appears as a ticket that links to its page.
+      fields:
+      - name: name
+        label: Event name
+        type: string
+      - name: part_of_speech
+        label: Word type
+        type: string
+        description: Shown in brackets after the name, like (n). Optional.
+      - name: definition
+        label: Description
+        type: text
+      - name: image
+        label: Photo
+        type: image
+        options:
+          media: photos
+      - name: page
+        label: Page
+        type: string
+        description: A page on this site, like cake-bake.html, or a full web address starting with https://
+      - name: stub_top
+        label: Ticket stub, top
+        type: string
+      - name: stub_bottom
+        label: Ticket stub, bottom
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{name}'
+  - name: folk_projects
+    label: Folk Projects page
+    type: file
+    path: content/pages/folk-projects.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: sidebar_photo
+      label: Side photo
+      component: photo
+      description: Optional photo beside the text.
+    - name: facts
+      label: “At a glance” box
+      type: object
+      description: Optional short facts shown beside the text.
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: value
+        label: Text
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{label}'
+    - name: intro
+      label: Introduction
+      type: rich-text
+      options:
+        format: html
+        media: false
+    - name: projects
+      label: Projects by year
+      type: object
+      description: Newest first.
+      fields:
+      - name: year
+        label: Year
+        type: string
+      - name: image
+        label: Photo
+        type: image
+        options:
+          media: photos
+      - name: text
+        label: Text
+        type: rich-text
+        options:
+          format: html
+          media: false
+      - name: button_label
+        label: Button text (optional)
+        type: string
+      - name: button_link
+        label: Button link (optional)
+        type: string
+        description: A page on this site, like cake-bake.html, or a full web address starting with https://
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{year}'
+  - name: in_the_field
+    label: In the Field page
+    type: file
+    path: content/pages/in-the-field.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: sidebar_photo
+      label: Side photo
+      component: photo
+      description: Optional photo beside the text.
+    - name: facts
+      label: “At a glance” box
+      type: object
+      description: Optional short facts shown beside the text.
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: value
+        label: Text
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{label}'
+    - name: pull_quote
+      label: Pull quote
+      type: object
+      description: Optional. Copy a sentence from this page's text to show it large. It only appears if the same words are
+        in the text.
+      fields:
+      - name: text
+        label: Quote
+        type: text
+      - name: by
+        label: Said by (optional)
+        type: string
+      - name: after_paragraph
+        label: Show after paragraph number
+        type: number
+    - name: blocks
+      label: Page sections
+      component: page_sections
+      description: The page, from top to bottom. Add text, photos, galleries, buttons and more.
+    - name: cards
+      label: Picture links
+      type: object
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: image
+        label: Photo
+        type: image
+        options:
+          media: photos
+      - name: page
+        label: Page
+        type: string
+        description: A page on this site, like cake-bake.html, or a full web address starting with https://
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{title}'
+  - name: local_support
+    label: Local Support page
+    type: file
+    path: content/pages/local-support.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: sidebar_photo
+      label: Side photo
+      component: photo
+      description: Optional photo beside the text.
+    - name: facts
+      label: “At a glance” box
+      type: object
+      description: Optional short facts shown beside the text.
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: value
+        label: Text
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{label}'
+    - name: blocks
+      label: Page sections
+      component: page_sections
+      description: The page, from top to bottom. Add text, photos, galleries, buttons and more.
+    - name: logos
+      label: Logos
+      type: object
+      fields:
+      - name: image
+        label: Logo
+        type: image
+        options:
+          media: photos
+      - name: name
+        label: Name
+        type: string
+      - name: link
+        label: Link (optional)
+        type: string
+        description: Full web address starting with https://
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{name}'
+  - name: prarthana
+    label: Prarthana's poem page
+    type: file
+    path: content/pages/prarthana.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: sidebar_photo
+      label: Side photo
+      component: photo
+      description: Optional photo beside the text.
+    - name: facts
+      label: “At a glance” box
+      type: object
+      description: Optional short facts shown beside the text.
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: value
+        label: Text
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{label}'
+    - name: intro_heading
+      label: Introduction heading
+      type: string
+    - name: intro
+      label: Introduction
+      type: rich-text
+      options:
+        format: html
+        media: false
+    - name: poem
+      label: Poem
+      type: object
+      fields:
+      - name: title
+        label: Title
+        type: string
+      - name: byline
+        label: Byline
+        type: string
+      - name: stanzas
+        label: Stanzas
+        type: text
+        description: One verse per box. Each line of the verse on its own line.
+        list: true
+      - name: credits
+        label: Credits
+        type: string
+    - name: recitation
+      label: Recitation link
+      type: object
+      fields:
+      - name: image
+        label: Photo
+        type: image
+        options:
+          media: photos
+      - name: caption
+        label: Caption
+        type: string
+      - name: link
+        label: Link
+        type: string
+        description: Full web address, for example the YouTube video.
+  - name: social
+    label: Social page
+    type: file
+    path: content/pages/social.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: heading
+      label: Heading
+      type: string
+  - name: soil_to_soul_series
+    label: Soil to Soul Series page
+    type: file
+    path: content/pages/soil-to-soul-series.json
+    format: json
+    operations:
+      delete: false
+    fields:
+    - name: title
+      label: Page title
+      type: string
+      description: The big heading at the top of the page.
+      required: true
+    - name: description
+      label: Search description
+      type: text
+      description: One or two sentences that Google and social media show for this page.
+    - name: kicker
+      label: Small label above the title
+      type: string
+      description: Optional. Leave empty to show the menu section, like “Events”.
+    - name: subtitle
+      label: Line under the title
+      type: string
+      description: Optional.
+    - name: menu_section
+      label: Menu section
+      type: string
+      description: 'Only for pages that are not in the menu: the top menu item this page belongs under, for example In the
+        Field.'
+    - name: banner_image
+      label: Banner photo
+      type: image
+      description: The wide photo behind the title.
+      options:
+        media: photos
+    - name: banner_video
+      label: Banner video
+      type: file
+      description: Optional. A short silent video that plays behind the title instead of the photo.
+      options:
+        media: files
+    - name: sidebar_photo
+      label: Side photo
+      component: photo
+      description: Optional photo beside the text.
+    - name: facts
+      label: “At a glance” box
+      type: object
+      description: Optional short facts shown beside the text.
+      fields:
+      - name: label
+        label: Label
+        type: string
+      - name: value
+        label: Text
+        type: string
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{label}'
+    - name: intro
+      label: Introduction
+      type: rich-text
+      options:
+        format: html
+        media: false
+    - name: episodes
+      label: Episodes
+      type: object
+      description: Also shown on the home page.
+      fields:
+      - name: number
+        label: Episode number in words
+        type: string
+        description: 'For example: Four'
+      - name: title
+        label: Title
+        type: string
+      - name: subtitle
+        label: Subtitle (optional)
+        type: string
+      - name: image
+        label: Cover photo
+        type: image
+        options:
+          media: photos
+      - name: page
+        label: Page
+        type: string
+        description: A page on this site, like cake-bake.html, or a full web address starting with https://
+      list:
+        collapsible:
+          collapsed: true
+          summary: 'Episode {number}: {title}'
+- name: site
+  label: Site settings and menu
+  type: file
+  path: content/site.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: site_url
+    label: Website address
+    type: string
+    description: The address the site will have, like https://www.sootsblues.org/ (used for sharing links).
+  - name: email
+    label: Email address
+    type: string
+  - name: social
+    label: Social media
+    type: object
+    fields:
+    - name: name
+      label: Name
+      type: string
+      description: Instagram, Facebook or YouTube get their own icons.
+    - name: url
+      label: Link
+      type: string
+    - name: handle
+      label: Handle
+      type: string
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{name}'
+  - name: menu
+    label: Menu
+    type: object
+    description: The menu at the top of every page.
+    fields:
+    - name: label
+      label: Menu item
+      type: string
+    - name: link
+      label: Link
+      type: string
+      description: A page on this site, like cake-bake.html, or a full web address starting with https://
+    - name: feature_image
+      label: Photo in the dropdown
+      type: image
+      options:
+        media: photos
+    - name: items
+      label: Dropdown links
+      type: object
+      fields:
+      - name: label
+        label: Text
+        type: string
+      - name: link
+        label: Link
+        type: string
+        description: A page on this site, like cake-bake.html, or a full web address starting with https://
+      - name: indent
+        label: Indented (a sub-page of the link above)
+        type: boolean
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{label}'
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{label}'
+  - name: donate_button
+    label: Donate button
+    type: object
+    fields:
+    - name: label
+      label: Button text
+      type: string
+    - name: link
+      label: Link
+      type: string
+      description: A page on this site, like cake-bake.html, or a full web address starting with https://
+  - name: sections
+    label: Page groups
+    type: object
+    description: Pages in the same group get “In this section” links and Previous/Next buttons.
+    fields:
+    - name: name
+      label: Group name
+      type: string
+    - name: pages
+      label: Pages
+      type: string
+      description: Like cake-bake.html, in order.
+      list: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{name}'
+  - name: footer
+    label: Footer
+    type: object
+    fields:
+    - name: about
+      label: About text
+      type: text
+    - name: copyright
+      label: Copyright line
+      type: string
+    - name: tagline
+      label: Tagline
+      type: string
+  - name: logo
+    label: Logo
+    type: image
+    description: The round SOOTS badge. Used for the logo, the footer and the browser tab icon.
+    options:
+      media: photos
+  - name: share_image
+    label: Sharing photo
+    type: image
+    description: Shown when the site is shared on social media.
+    options:
+      media: photos
+  - name: default_description
+    label: Default search description
+    type: text
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: Create {path} (by {userName} via Pages CMS)
+      update: Update {path} (by {userName} via Pages CMS)
+      delete: Delete {path} (by {userName} via Pages CMS)
+      rename: Rename {oldPath} to {newPath} (by {userName} via Pages CMS)

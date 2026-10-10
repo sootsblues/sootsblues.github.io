@@ -1,0 +1,40 @@
+{
+  "title": "Donations",
+  "description": "SOOTS is always looking for funding to keep the good work that we have started going, and will accept charitable donations at any time. Businesses: If you…",
+  "kicker": "",
+  "subtitle": "",
+  "menu_section": "",
+  "banner_image": "/photos/639130717.jpg",
+  "banner_video": "",
+  "heading": "How Can You Help?",
+  "intro": "SOOTS is always looking for funding to keep the good work that we have started going, and will accept charitable donations at any time.",
+  "cards": [
+    {
+      "title": "Businesses",
+      "photo": "",
+      "items": [
+        {
+          "text": "If you would like to sponsor a cake at Cake Bake, please contact Charles Montague, and we would be happy to work with you in designing and baking a cake themed to your business.",
+          "button_label": "Sponsor a cake",
+          "button_link": "mailto:dcasillas@raleighcharterhs.org"
+        },
+        {
+          "text": "If you would like help scheduling local artists for events at your business, please email Charles Montague. We love connecting artists and musicians with businesses in our community, be they students, blues-men, or MMRF artists.",
+          "button_label": "Email Charles Montague",
+          "button_link": "mailto:cmontague@raleighcharterhs.org"
+        }
+      ]
+    },
+    {
+      "title": "Private Donations",
+      "photo": "/photos/cake-bake-2012.jpg",
+      "items": [
+        {
+          "text": "If you would like to make any private contributions, please email Charles Montague.",
+          "button_label": "Email Charles Montague",
+          "button_link": "mailto:cmontague@raleighcharterhs.org"
+        }
+      ]
+    }
+  ]
+}
