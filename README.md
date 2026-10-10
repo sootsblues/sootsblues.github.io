@@ -4,7 +4,6 @@ The website of SOOTS (Sustaining Roots Music), a Raleigh Charter High School com
 project supporting Piedmont blues musicians since 2006.
 
 - **Students editing the site:** read [docs/EDITING.md](docs/EDITING.md). No code needed.
-- **Teacher or owner setting it up:** read [docs/SETUP.md](docs/SETUP.md).
 
 ## How it works
 
