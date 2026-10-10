@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Check that the Pages CMS settings (.pages.yml) describe every field in content/.
 
-Pages CMS only shows the fields listed in .pages.yml. If a content file has a field the
-settings don't list, students can't see or edit it. So whenever you add a field to build.py,
-add it to .pages.yml too and run:
+Pages CMS only shows the fields listed in .pages.yml (at the top of the repository). If a
+content file has a field the settings don't list, students can't see or edit it. So whenever
+you add a field to build.py, add it to .pages.yml too and run (from website-code/):
 
     pip install pyyaml
     python3 tools/check_editor_config.py
@@ -15,7 +15,8 @@ try:
 except ImportError:
     sys.exit("This check needs PyYAML. Install it with: pip install pyyaml")
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CODE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # website-code/
+ROOT = os.path.dirname(CODE)  # the top of the repository, where .pages.yml lives
 config = yaml.safe_load(open(os.path.join(ROOT, ".pages.yml"), encoding="utf-8"))
 COMPONENTS = config.get("components") or {}
 errors = []
@@ -103,7 +104,7 @@ for e in entries(config.get("content") or []):
         checked.add(os.path.normpath(p))
         check_fields(json.load(open(os.path.join(ROOT, p), encoding="utf-8")), fields, p)
 
-for folder in ("content", "content/pages"):
+for folder in (os.path.relpath(os.path.join(CODE, "content"), ROOT), os.path.relpath(os.path.join(CODE, "content", "pages"), ROOT)):
     for n in sorted(os.listdir(os.path.join(ROOT, folder))):
         p = os.path.normpath(os.path.join(folder, n))
         if n.endswith(".json") and p not in checked:

@@ -9,7 +9,7 @@ Everything on the site comes from the files in content/:
     content/photos/         photos and logos
     content/files/          audio, video and PDF files
 
-Students edit those files through Pages CMS (see docs/EDITING.md). This script turns
+Students edit those files through Pages CMS (see README.md at the top of the repository). This script turns
 them into the plain HTML/CSS/JS site in ./site, and GitHub runs it automatically after
 every change (.github/workflows/deploy.yml). To build on your own computer:
 
@@ -44,7 +44,7 @@ def load(path):
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
     except FileNotFoundError:
-        sys.exit(f"\nBUILD STOPPED: {rel} is missing. It holds part of the site, so put it back (see docs/EDITING.md).")
+        sys.exit(f"\nBUILD STOPPED: {rel} is missing. It holds part of the site, so put it back.")
     except json.JSONDecodeError as e:
         sys.exit(f"\nBUILD STOPPED: {rel} has a typo (line {e.lineno}, column {e.colno}: {e.msg}).\n"
                  "This usually comes from editing the file by hand on GitHub. Undo that change, or use Pages CMS instead.")

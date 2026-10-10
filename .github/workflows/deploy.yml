@@ -1,9 +1,10 @@
-# Builds the website from content/ and publishes it with GitHub Pages.
+# Builds the website from website-code/content/ and publishes it with GitHub Pages.
+# This file must stay in .github/workflows at the top of the repository: GitHub only looks there.
 #
 # It runs after every change to the main branch, including every save in Pages CMS.
 # You can also start it by hand: Actions tab > "Build and publish the website" > Run workflow.
 # If a run fails, the previous version of the site stays online. Open the failed run in the
-# Actions tab to read why (see docs/EDITING.md, "If the site doesn't update").
+# Actions tab to read why (see README.md, "If the site doesn't update").
 name: Build and publish the website
 
 on:
@@ -24,12 +25,16 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: website-code
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v7
         with:
           python-version: "3.13"
           cache: pip
+          cache-dependency-path: website-code/requirements.txt
       - name: Install Python packages
         run: pip install -r requirements.txt
       - name: Check that the editor settings match the content
@@ -39,7 +44,7 @@ jobs:
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: site
+          path: website-code/site
 
   deploy:
     needs: build

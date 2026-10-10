@@ -1,21 +1,21 @@
 # Pages CMS settings: what students see when they edit the site at https://app.pagescms.org
 # Docs: https://pagescms.org/docs/configuration/
 #
-# Each entry below matches a file in content/. If you add a new field to build.py, add it
-# here too, then run: python3 tools/check_editor_config.py
-# Never set custom domains here; see docs/SETUP.md for the website address.
+# Each entry below matches a file in website-code/content/. If you add a new field to
+# website-code/build.py, add it here too, then run: python3 website-code/tools/check_editor_config.py
+# This file must stay at the top of the repository: Pages CMS only looks for it there.
 
 media:
 - name: photos
   label: Photos
-  input: content/photos
+  input: website-code/content/photos
   output: /photos
   categories:
   - image
   rename: safe
 - name: files
   label: Audio, video and PDFs
-  input: content/files
+  input: website-code/content/files
   output: /files
   categories:
   - audio
@@ -242,7 +242,7 @@ content:
 - name: home
   label: Home page
   type: file
-  path: content/home.json
+  path: website-code/content/home.json
   format: json
   operations:
     delete: false
@@ -475,7 +475,7 @@ content:
 - name: pages
   label: Pages
   type: collection
-  path: content/pages
+  path: website-code/content/pages
   format: json
   subfolders: false
   exclude:
@@ -582,7 +582,7 @@ content:
   - name: '2026'
     label: '2026: The Macon Farm page'
     type: file
-    path: content/pages/2026.json
+    path: website-code/content/pages/2026.json
     format: json
     operations:
       delete: false
@@ -669,7 +669,7 @@ content:
   - name: archive
     label: Archive (posters) page
     type: file
-    path: content/pages/archive.json
+    path: website-code/content/pages/archive.json
     format: json
     operations:
       delete: false
@@ -733,7 +733,7 @@ content:
   - name: contact_us
     label: Contact Us page
     type: file
-    path: content/pages/contact-us.json
+    path: website-code/content/pages/contact-us.json
     format: json
     operations:
       delete: false
@@ -805,7 +805,7 @@ content:
   - name: donations
     label: Donations page
     type: file
-    path: content/pages/donations.json
+    path: website-code/content/pages/donations.json
     format: json
     operations:
       delete: false
@@ -887,7 +887,7 @@ content:
   - name: episode_3_fountain
     label: 'Episode 3: Fountain page'
     type: file
-    path: content/pages/episode-3-fountain.json
+    path: website-code/content/pages/episode-3-fountain.json
     format: json
     operations:
       delete: false
@@ -991,7 +991,7 @@ content:
   - name: events
     label: Events page
     type: file
-    path: content/pages/events.json
+    path: website-code/content/pages/events.json
     format: json
     operations:
       delete: false
@@ -1067,7 +1067,7 @@ content:
   - name: folk_projects
     label: Folk Projects page
     type: file
-    path: content/pages/folk-projects.json
+    path: website-code/content/pages/folk-projects.json
     format: json
     operations:
       delete: false
@@ -1164,7 +1164,7 @@ content:
   - name: in_the_field
     label: In the Field page
     type: file
-    path: content/pages/in-the-field.json
+    path: website-code/content/pages/in-the-field.json
     format: json
     operations:
       delete: false
@@ -1264,7 +1264,7 @@ content:
   - name: local_support
     label: Local Support page
     type: file
-    path: content/pages/local-support.json
+    path: website-code/content/pages/local-support.json
     format: json
     operations:
       delete: false
@@ -1349,7 +1349,7 @@ content:
   - name: prarthana
     label: Prarthana's poem page
     type: file
-    path: content/pages/prarthana.json
+    path: website-code/content/pages/prarthana.json
     format: json
     operations:
       delete: false
@@ -1453,7 +1453,7 @@ content:
   - name: social
     label: Social page
     type: file
-    path: content/pages/social.json
+    path: website-code/content/pages/social.json
     format: json
     operations:
       delete: false
@@ -1498,7 +1498,7 @@ content:
   - name: soil_to_soul_series
     label: Soil to Soul Series page
     type: file
-    path: content/pages/soil-to-soul-series.json
+    path: website-code/content/pages/soil-to-soul-series.json
     format: json
     operations:
       delete: false
@@ -1593,7 +1593,7 @@ content:
 - name: site
   label: Site settings and menu
   type: file
-  path: content/site.json
+  path: website-code/content/site.json
   format: json
   operations:
     delete: false
