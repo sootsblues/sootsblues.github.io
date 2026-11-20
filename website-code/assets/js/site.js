@@ -1,4 +1,4 @@
-// SOOTS site behaviour: menu, scroll effects, hero slideshow, players, filters, lightbox, form.
+// SOOTS site behaviour: menu, scroll effects, hero slideshow, slideshows, players, filters, lightbox, form.
 (function () {
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var root = document.documentElement;
@@ -110,18 +110,49 @@
     restart();
   }
 
-  // 3D tilt + spotlight on cards (pointer devices only)
-  if (matchMedia("(hover: hover)").matches && !reduce) {
-    document.querySelectorAll(".tilt").forEach(function (el) {
-      el.addEventListener("mousemove", function (e) {
-        var r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-        el.style.transform = "perspective(900px) rotateX(" + ((0.5 - y) * 5).toFixed(2) + "deg) rotateY(" + ((x - 0.5) * 6).toFixed(2) + "deg) translateY(-4px)";
-        el.style.setProperty("--mx", x * 100 + "%");
-        el.style.setProperty("--my", y * 100 + "%");
-      });
-      el.addEventListener("mouseleave", function () { el.style.transform = ""; });
+  // Slideshows: each slide is a figure (photo + caption), so the caption moves with its photo
+  document.querySelectorAll(".slider").forEach(function (sl) {
+    var track = sl.querySelector(".slider-track"), slides = track.children, n = slides.length, i = 0, timer;
+    var dots = sl.querySelector(".sl-dots"), count = sl.querySelector(".sl-count");
+    if (n < 2) { var c = sl.querySelector(".slider-ctrl"); if (c) c.remove(); return; }
+    for (var k = 0; k < n; k++) {
+      slides[k].setAttribute("aria-roledescription", "slide");
+      slides[k].setAttribute("aria-label", (k + 1) + " of " + n);
+      if (dots) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("aria-label", "Show photo " + (k + 1));
+        b.addEventListener("click", (function (j) { return function () { go(j); restart(); }; })(k));
+        dots.appendChild(b);
+      }
+    }
+    function go(j) {
+      i = (j + n) % n;
+      track.style.transform = "translateX(" + (-100 * i) + "%)";
+      for (var k = 0; k < n; k++) slides[k].setAttribute("aria-hidden", k !== i);
+      if (dots) Array.prototype.forEach.call(dots.children, function (d, k) { d.classList.toggle("on", k === i); });
+      if (count) count.textContent = (i + 1) + " / " + n;
+    }
+    function restart() {
+      clearInterval(timer);
+      var ms = +sl.dataset.autoplay;
+      if (ms && !reduce) timer = setInterval(function () { go(i + 1); }, ms);
+    }
+    sl.querySelector(".sl-prev").addEventListener("click", function () { go(i - 1); restart(); });
+    sl.querySelector(".sl-next").addEventListener("click", function () { go(i + 1); restart(); });
+    sl.addEventListener("mouseenter", function () { clearInterval(timer); });
+    sl.addEventListener("mouseleave", restart);
+    sl.addEventListener("focusin", function () { clearInterval(timer); });
+    var tx = null;
+    sl.addEventListener("touchstart", function (e) { tx = e.touches[0].clientX; clearInterval(timer); }, { passive: true });
+    sl.addEventListener("touchend", function (e) {
+      if (tx === null) return;
+      var dx = e.changedTouches[0].clientX - tx;
+      if (Math.abs(dx) > 40) go(i + (dx < 0 ? 1 : -1));
+      tx = null; restart();
     });
-  }
+    go(0); restart();
+  });
 
   // Horizontal timeline buttons + drag to scroll
   var tl = document.querySelector(".h-timeline");

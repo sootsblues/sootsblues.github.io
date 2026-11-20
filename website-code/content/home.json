@@ -42,35 +42,25 @@
       "caption": ""
     }
   ],
-  "since": "since 2006",
+  "since": "Est. 2006",
   "title": "Sustaining Roots Music",
   "subtitle": "a Raleigh Charter Community Project",
   "buttons": [
     {
-      "label": "SOOTS Origins",
+      "label": "SOOTS’ Origin",
       "link": "about-us.html"
     },
     {
-      "label": "Music Maker Foundation",
-      "link": "https://www.musicmaker.org/"
+      "label": "Music Maker Fundraising",
+      "link": "music-maker.html"
+    },
+    {
+      "label": "UNC-CSAS Folklore",
+      "link": "unc-csas.html"
     }
   ],
   "intro": "<p>SOOTS (Sustaining Roots Music) was founded in 2006 to raise awareness and support for aging Piedmont blues musicians through the Music Maker Relief Foundation.</p>\n<p>What began with student-led fundraisers like the Fat Tuesday Feastival and May Day Cake Bake soon grew into annual benefit concerts in downtown Raleigh featuring Music Maker artists and friends. Along the way, SOOTS partnered with Center for the Study of the American South to connect hands-on social entrepreneurship with the study of Southern music, folklore, and regional traditions. Rooted in music, community, and cultural stewardship, SOOTS continues to support artists while learning from and giving back to the traditions that inspired it in the first place.</p>",
   "motto": "“…from our collective soil to our universal soul.”",
-  "scrapbook": [
-    {
-      "image": "/photos/fat-tuesday-2006.jpg",
-      "caption": "Fat Tuesday, 2006"
-    },
-    {
-      "image": "/photos/cake-bake-2012.jpg",
-      "caption": "Cake Bake, 2012"
-    },
-    {
-      "image": "/photos/johnd.png",
-      "caption": "John Dee Holeman"
-    }
-  ],
   "showcase": {
     "heading": "SOOTS Showcase",
     "cards": [
@@ -98,7 +88,7 @@
     ]
   },
   "timeline": {
-    "heading": "Since 2006",
+    "heading": "Through the Years",
     "entries": [
       {
         "year": "2006",
@@ -228,9 +218,19 @@
     "link_label": "Local Support →",
     "logos": [
       {
+        "image": "/photos/musicmakerlogo.png",
+        "link": "https://musicmaker.org/",
+        "name": "Music Maker Foundation"
+      },
+      {
         "image": "/photos/pinecone.png",
         "link": "https://pinecone.org/",
         "name": "PineCone"
+      },
+      {
+        "image": "/photos/phlogo-lores.jpg",
+        "link": "https://www.preservationhall.com/",
+        "name": "Preservation Hall Jazz Band"
       },
       {
         "image": "/photos/unc-csas-blk-small.jpg",
@@ -238,14 +238,24 @@
         "name": "UNC Center for the Study of the American South"
       },
       {
+        "image": "/photos/larrys-coffee-460x-2x.webp",
+        "link": "https://larryscoffee.com/",
+        "name": "Larry's Coffee"
+      },
+      {
+        "image": "/photos/images.png",
+        "link": "https://viderichocolatefactory.com/",
+        "name": "Videri Chocolate Factory"
+      },
+      {
+        "image": "/photos/yellow-dog-logo-small-final.webp",
+        "link": "",
+        "name": "Yellow Dog Bread Co."
+      },
+      {
         "image": "/photos/775740301.jpg",
         "link": "https://fairwayprintingofnc.com/",
         "name": "Fairway Printing"
-      },
-      {
-        "image": "/photos/musicmakerlogo.png",
-        "link": "https://www.musicmaker.org/",
-        "name": "Music Maker Foundation"
       }
     ]
   },

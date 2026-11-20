@@ -33,6 +33,16 @@
           "indent": false
         },
         {
+          "label": "Music Maker",
+          "link": "music-maker.html",
+          "indent": false
+        },
+        {
+          "label": "UNC-CSAS Folklore",
+          "link": "unc-csas.html",
+          "indent": false
+        },
+        {
           "label": "Social",
           "link": "social.html",
           "indent": false
@@ -194,6 +204,8 @@
       "name": "about",
       "pages": [
         "about-us.html",
+        "music-maker.html",
+        "unc-csas.html",
         "social.html",
         "contact-us.html",
         "donations.html",

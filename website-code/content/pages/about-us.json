@@ -10,9 +10,43 @@
     "image": "/photos/fat-tuesday-2006.jpg",
     "caption": "Fat Tuesday, 2006"
   },
+  "sidebar_slideshow": [
+    {
+      "image": "/photos/fat-tuesday-2006.jpg",
+      "caption": "Fat Tuesday, 2006, where SOOTS began"
+    },
+    {
+      "image": "/photos/dom-flemmons-sittin-in-at-1st-anual-2007-2.jpg",
+      "caption": "Dom Flemmons sittin' in at the 1st annual, 2007"
+    },
+    {
+      "image": "/photos/4-05-08-2nd-annual-george-higgs-lets-loose.jpg",
+      "caption": "George Higgs lets loose at the 2nd annual, 2008"
+    },
+    {
+      "image": "/photos/cake-bake-2012.jpg",
+      "caption": "May Day Cake Bake, 2012"
+    },
+    {
+      "image": "/photos/mary-annettes-photo-by-kate-rhudy-c-2012_orig.jpg",
+      "caption": "The Mary Annettes, photo by Kate Rhudy, c. 2012"
+    },
+    {
+      "image": "/photos/reed-turchi-plays-gospel-at-7th-annual-in-2013.jpg",
+      "caption": "Reed Turchi plays gospel at the 7th annual, 2013"
+    },
+    {
+      "image": "/photos/justin-robinson-and-his-harp-visit-c-2014.jpg",
+      "caption": "Justin Robinson and his harp visit, c. 2014"
+    },
+    {
+      "image": "/photos/sister-perry-fall-2018-for-pc.jpg",
+      "caption": "Sister Lena Mae Perry in our classroom, fall 2018"
+    }
+  ],
   "facts": [
     {
-      "label": "Since",
+      "label": "Established",
       "value": "2006"
     },
     {

@@ -82,6 +82,22 @@ components:
         collapsible:
           collapsed: true
           summary: '{caption}'
+  slideshow_section:
+    type: object
+    label: Slideshow
+    fields:
+    - name: label
+      label: Name (for screen readers)
+      type: string
+      description: A few words, like "Our work with Music Maker".
+    - name: photos
+      label: Photos
+      component: photo
+      description: One photo at a time, each with its caption under it. Visitors use the arrows or swipe.
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{caption}'
   button_section:
     type: object
     label: Button
@@ -217,6 +233,9 @@ components:
     - name: gallery
       label: Photo gallery
       component: gallery_section
+    - name: slideshow
+      label: Slideshow
+      component: slideshow_section
     - name: button
       label: Button
       component: button_section
@@ -268,8 +287,10 @@ content:
     label: Line under the title
     type: string
   - name: buttons
-    label: Buttons
+    label: Main buttons
     type: object
+    description: The main buttons on the big photo at the top (currently SOOTS' Origin, Music Maker Fundraising, UNC-CSAS
+      Folklore).
     fields:
     - name: label
       label: Button text
@@ -289,16 +310,9 @@ content:
       format: html
       media: false
   - name: motto
-    label: Motto (handwritten line)
+    label: Motto (line under the introduction)
     type: string
-  - name: scrapbook
-    label: Scrapbook photos
-    component: photo
-    description: Three photos beside the introduction.
-    list:
-      collapsible:
-        collapsed: true
-        summary: '{caption}'
+    description: Optional. Leave empty to hide it.
   - name: showcase
     label: Showcase
     type: object
@@ -431,6 +445,7 @@ content:
     - name: logos
       label: Logos
       type: object
+      description: The first four logos show larger on the top row; the rest go on a second row.
       fields:
       - name: image
         label: Logo
@@ -541,6 +556,15 @@ content:
     label: Side photo
     component: photo
     description: Optional photo beside the text.
+  - name: sidebar_slideshow
+    label: Side slideshow
+    component: photo
+    description: Optional. Two or more photos that slide beside the text, each with its caption. Shown instead of the side
+      photo.
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{caption}'
   - name: facts
     label: “At a glance” box
     type: object

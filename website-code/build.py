@@ -434,6 +434,10 @@ def render(blocks, page, depth=0):
                 out.append(figure(P(b["image"]), b.get("caption"), b.get("link") or None))
         elif t == "gallery":
             out.append(gallery(photo_list(b.get("photos")), "grid"))
+        elif t == "slideshow":
+            s = slider(photo_list(b.get("photos")), b.get("label") or "Photos")
+            if s:
+                out.append(f'<div class="feature-slider reveal">{s}</div>')
         elif t == "button":
             row = []
             while i < len(blocks) and blocks[i].get("type") == "button":
@@ -480,14 +484,38 @@ CONTACT_FORM = f'''
 ICONS = {
     "Instagram": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>',
     "Facebook": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.5h-3c-2.5 0-4 1.6-4 4V11H7.5v3.5H10V21h3.5v-6.5h3l.5-3.5h-3.5V8.8c0-.5.3-.8.5-.8Z" fill="currentColor"/></svg>',
-    "YouTube": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.2v5.6l5-2.8-5-2.8Z" fill="currentColor"/></svg>',
+    "YouTube": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 7.5v9l7.5-4.5-7.5-4.5Z" fill="currentColor"/></svg>',
     "Mail": '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m3.5 6.5 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>',
     "Link": '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>',
 }
 SOCIAL = [(s.get("name", ""), s.get("url", ""), s.get("handle", "")) for s in SITE.get("social") or [] if s.get("url")]
 
+ICON_CLASS = {"Instagram": "ig", "Facebook": "fb", "YouTube": "yt"}  # brand colours, see style.css
+
 def icon(name):
     return ICONS.get(name, ICONS["Link"])
+
+def social_icons():
+    """Round full-colour social icons (footer and Contact Us)."""
+    return "".join(f'<a class="{ICON_CLASS.get(k, "other")}" href="{u}" target="_blank" rel="noopener" aria-label="{k}">{icon(k)}</a>'
+                   for k, u, _ in SOCIAL)
+
+def slider(items, label="Photos", autoplay=6500):
+    """Slideshow: each slide is a photo with its caption underneath, and the caption moves with it."""
+    figs = []
+    for name, cap in items:
+        r = img(name, 1200)
+        if not r:
+            continue
+        PHOTOS.append((CUR["page"], name, cap, r[0]))
+        figs.append(f'<figure class="slide"><img src="{r[0]}" width="{r[2]}" height="{r[3]}" alt="{esc(cap)}" loading="lazy" decoding="async">'
+                    + (f"<figcaption>{esc(cap)}</figcaption>" if cap else "<figcaption></figcaption>") + "</figure>")
+    if not figs:
+        return ""
+    return (f'<div class="slider" data-autoplay="{autoplay}" role="region" aria-roledescription="carousel" aria-label="{esc(label)}">'
+            f'<div class="slider-viewport"><div class="slider-track">{"".join(figs)}</div></div>'
+            '<div class="slider-ctrl"><button type="button" class="sl-btn sl-prev" aria-label="Previous photo">←</button>'
+            '<div class="sl-dots"></div><button type="button" class="sl-btn sl-next" aria-label="Next photo">→</button></div></div>')
 
 def nav_html(page):
     cur = PARENT.get(page, (None, None))[1]
@@ -509,7 +537,7 @@ def nav_html(page):
             f'<div class="mega"><div class="mega-inner">'
             f'<div class="mega-intro"><p class="mega-title">{esc(label)}</p></div>'
             f'<ul class="mega-links{" two" if len(kids) > 5 else ""}">{links}</ul>'
-            f'<a class="mega-feat" href="{h}" tabindex="-1" aria-hidden="true"><img src="{fimg}" alt="" loading="lazy"><span class="tape" aria-hidden="true"></span></a>'
+            f'<a class="mega-feat" href="{h}" tabindex="-1" aria-hidden="true"><img src="{fimg}" alt="" loading="lazy"></a>'
             f'</div></div></li>')
     return "".join(items)
 
@@ -537,7 +565,7 @@ def head(title, desc, page):
 <script>document.documentElement.classList.replace("no-js","js")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v={ASSET_VERSION}">
 <script src="js/site.js?v={ASSET_VERSION}" defer></script>
 </head>
@@ -560,7 +588,7 @@ def head(title, desc, page):
 '''
 
 def foot():
-    soc = "".join(f'<a href="{u}" target="_blank" rel="noopener" aria-label="{k}">{icon(k)}</a>' for k, u, _ in SOCIAL)
+    soc = social_icons()
     cols = "".join(
         f'<div><h4>{esc(l)}</h4><ul>' + "".join(
             f'<li><a href="{kh}">{esc(kl)}</a></li>' for kl, kh, ind in (kids or [(l, h, 0)]) if not ind) + "</ul></div>"
@@ -573,7 +601,7 @@ def foot():
       <img class="footer-disc" src="img/logo-badge-light.png" width="120" height="120" alt="SOOTS record-label logo">
       <p>{esc(f.get("about", ""))}</p>
       <p class="footer-contact"><a href="mailto:{EMAIL}">{ICONS["Mail"]}{EMAIL}</a></p>
-      <div class="social">{soc}</div>
+      <div class="social color">{soc}</div>
     </div>
     <div class="footer-links">{cols}</div>
   </div>
@@ -645,11 +673,15 @@ def aside(page, photo=None, cap=""):
     if facts:
         rows = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in facts)
         parts.append(f'<div class="glance"><p class="glance-head">At a glance</p><dl>{rows}</dl></div>')
+    side_show = photo_list(PAGES[page].get("sidebar_slideshow")) if page in PAGES else []
+    if len(side_show) > 1:
+        parts.append(slider(side_show, "Photos", 6000))
+        photo = None
     if photo:
         r = img(photo, 900)
         if r:
             PHOTOS.append((CUR["page"], photo, cap, r[0]))
-            parts.append(f'<a class="aside-photo lb" href="{r[1]}" data-cap="{esc(cap)}"><img src="{r[0]}" alt="{esc(cap)}" loading="lazy"><span class="tape" aria-hidden="true"></span></a>'
+            parts.append(f'<a class="aside-photo lb" href="{r[1]}" data-cap="{esc(cap)}"><img src="{r[0]}" alt="{esc(cap)}" loading="lazy"></a>'
                          + (f'<p class="aside-cap">{esc(cap)}</p>' if cap else ""))
     g = group_of(page)
     if g:
@@ -717,7 +749,7 @@ def article(page, extra_after=""):
                 break
     out = f'<div class="wrap article"><div class="prose story">{body}</div>{aside(page, photo, cap)}</div>'
     for g in wide:
-        out += (f'<section class="wrap wide-gallery">{ORN}<div class="section-head center"><h2 class="scribble">Photographs</h2></div>'
+        out += (f'<section class="wrap wide-gallery">{ORN}<div class="section-head center"><h2>Photographs</h2></div>'
                 + gallery(photo_list(g.get("photos")), "grid", filters=(page == "cake-bake.html"), polaroid=True) + "</section>")
     return out + extra_after
 
@@ -725,25 +757,25 @@ def article(page, extra_after=""):
 def body_social(page):
     d = PAGES[page]
     cards = "".join(
-        f'<a class="social-card tilt" href="{u}" target="_blank" rel="noopener">{icon(k)}<span class="sc-name">{esc(k)}</span>'
+        f'<a class="social-card" href="{u}" target="_blank" rel="noopener"><span class="sc-icon {ICON_CLASS.get(k, "other")}">{icon(k)}</span><span class="sc-name">{esc(k)}</span>'
         f'<span class="sc-handle">{esc(h)}</span><span class="arr" aria-hidden="true">↗</span></a>'
         for k, u, h in SOCIAL)
-    return f'<section class="wrap block"><div class="section-head center reveal"><h2 class="scribble">{esc(d.get("heading", ""))}</h2></div><div class="social-cards">{cards}</div></section>'
+    return f'<section class="wrap block"><div class="section-head center reveal"><h2>{esc(d.get("heading", ""))}</h2></div><div class="social-cards">{cards}</div></section>'
 
 def body_contact(page):
     d = PAGES[page]
     rows = "".join(f'<li><span class="kicker">{esc(m.get("label", ""))}</span><a href="mailto:{esc(m["address"])}">{esc(m["address"])}</a></li>'
                    for m in d.get("emails") or [] if m.get("address"))
-    soc = "".join(f'<a href="{u}" target="_blank" rel="noopener" aria-label="{k}">{icon(k)}</a>' for k, u, _ in SOCIAL)
+    soc = social_icons()
     addr = "<br>".join(esc(l) for l in (d.get("address") or "").splitlines() if l.strip())
     intro = d.get("intro") or ""
     # the editor wraps text in <p>; a paragraph can't sit inside another paragraph
     lede = f'<div class="lede">{intro}</div>' if re.search(r"<(p|ul|ol)[\s>]", intro) else f'<p class="lede">{intro}</p>'
     return f'''<section class="wrap block contact-grid">
-  <div><h2 class="reveal scribble">{esc(d.get("heading", ""))}</h2>{lede}{CONTACT_FORM}</div>
+  <div><h2 class="reveal">{esc(d.get("heading", ""))}</h2>{lede}{CONTACT_FORM}</div>
   <aside class="contact-card"><ul class="mail-list">{rows}</ul>
     <p class="addr">{addr}</p>
-    {iframe("map") if d.get("show_map") else ""}<div class="social dark">{soc}</div></aside>
+    {iframe("map") if d.get("show_map") else ""}<div class="social color">{soc}</div></aside>
 </section>'''
 
 def body_donations(page):
@@ -754,10 +786,10 @@ def body_donations(page):
                  for i, it in enumerate(it for it in c.get("items") or [] if it.get("text") or it.get("button_label"))]
         r = img(P(c.get("photo")), 700) if c.get("photo") else None
         if r:
-            items.append(f'<figure class="scrap"><img src="{r[0]}" alt="" loading="lazy"><span class="tape" aria-hidden="true"></span></figure>')
+            items.append(f'<figure class="scrap"><img src="{r[0]}" alt="" loading="lazy"></figure>')
         cards.append(f'<article class="give-card reveal"><span class="give-no">{n:02d}</span><h3>{esc(c.get("title", ""))}</h3>'
                      + "\n    ".join(items) + "</article>")
-    return f'''<section class="wrap block"><div class="section-head center reveal"><h2 class="scribble">{esc(d.get("heading", ""))}</h2>
+    return f'''<section class="wrap block"><div class="section-head center reveal"><h2>{esc(d.get("heading", ""))}</h2>
 <p class="lede narrow-text">{esc(d.get("intro", ""))}</p></div>
 <div class="give-grid two">
   {(chr(10) + "  ").join(cards)}
@@ -767,7 +799,7 @@ def ticket(e):
     r = img(P(e.get("image")), 900)
     pos = e.get("part_of_speech")
     word = f'{esc(e.get("name", ""))} <em>({esc(pos)})</em>' if pos else esc(e.get("name", ""))
-    return f'''<a class="ticket tilt reveal" href="{esc(e.get("page", ""))}">
+    return f'''<a class="ticket reveal" href="{esc(e.get("page", ""))}">
   <span class="t-img"><img src="{r[0] if r else ""}" alt="" loading="lazy"></span>
   <span class="t-body"><span class="t-word">{word}</span><span class="t-def">{esc(e.get("definition", ""))}</span><span class="t-more">Learn more →</span></span>
   <span class="t-stub"><span>{esc(e.get("stub_top", ""))}</span><b>Admit<br>One</b><span>{esc(e.get("stub_bottom", ""))}</span></span>
@@ -793,7 +825,7 @@ def body_soil(page):
     intro = PAGES[page].get("intro") or ""
     sl = "".join(sleeve(e) for e in episodes())
     return f'''<div class="wrap article narrow"><div class="prose story">{re.sub("<p>", '<p class="dropcap">', intro, count=1)}</div>{page_aside(page)}</div>
-<section class="band stitched"><div class="wrap"><div class="sleeves">{sl}</div></div></section>'''
+<section class="band"><div class="wrap"><div class="sleeves">{sl}</div></div></section>'''
 
 def body_folk(page):
     d = PAGES[page]
@@ -820,7 +852,7 @@ def body_archive(page):
                 c = cap or t
                 figs.append(f'<figure class="g-item poster" data-tag="s{i}"><a href="{r[1]}" class="lb" data-cap="{esc(c)}"><img src="{r[0]}" width="{r[2]}" height="{r[3]}" alt="{esc(c)}" loading="lazy"></a>'
                             f'<figcaption>{esc(cap) if cap else esc(t)}</figcaption></figure>')
-    return f'''<section class="wrap block"><div class="section-head reveal"><h2 class="scribble">{esc(d.get("heading", ""))}</h2></div>
+    return f'''<section class="wrap block"><div class="section-head reveal"><h2>{esc(d.get("heading", ""))}</h2></div>
 <div class="filterable"><div class="chips" role="toolbar" aria-label="Filter posters">{tabs}</div><div class="gallery posters">{"".join(figs)}</div></div></section>'''
 
 def body_local(page):
@@ -848,7 +880,7 @@ def body_fountain(page):
     letter_body = "".join(f"<p>{esc(l)}</p>" for l in letter.get("paragraphs") or [] if l)
     quote = (f'<blockquote class="pull reveal"><p>{esc(pq["text"])}</p><cite>{esc(pq.get("by", ""))}</cite></blockquote>' if pq.get("text") else "")
     return f'''<div class="wrap article"><div class="prose story">{body}</div>{page_aside(page)}</div>
-<section class="wrap wide-gallery">{ORN}<div class="section-head center"><h2 class="scribble">Photographs</h2></div>{gallery(photo_list(d.get("photos")), "grid", polaroid=True)}</section>
+<section class="wrap wide-gallery">{ORN}<div class="section-head center"><h2>Photographs</h2></div>{gallery(photo_list(d.get("photos")), "grid", polaroid=True)}</section>
 <section class="wrap block"><article class="letter reveal"><span class="stamp" aria-hidden="true"><img src="img/logo-badge.png" alt=""></span>
 <p class="salute">{esc(letter.get("greeting", ""))}</p>{letter_body}<p class="sign">{esc(letter.get("closing", ""))}<br><span>{esc(letter.get("signed", ""))}</span></p></article>
 {quote}</section>'''
@@ -859,13 +891,13 @@ def body_2026(page):
     vid = (f'\n<section class="wrap block"><div class="video-feature reveal">{video(F(doc["video"]), P(doc.get("poster")))}</div></section>'
            if doc.get("video") else "")
     return f'''<div class="wrap article narrow" id="macon-farm"><div class="prose story">
-<h2 class="scribble">{esc(doc.get("title", ""))}</h2><p class="byline">{esc(doc.get("byline", ""))}</p><p class=dropcap>{esc(doc.get("text", ""))}</p>{note}</div>{page_aside(page)}</div>{vid}'''
+<h2>{esc(doc.get("title", ""))}</h2><p class="byline">{esc(doc.get("byline", ""))}</p><p class=dropcap>{esc(doc.get("text", ""))}</p>{note}</div>{page_aside(page)}</div>{vid}'''
 
 def body_in_the_field(page):
     cards = "".join(
-        f'<a class="duo-card tilt reveal" href="{esc(c.get("page", ""))}"><img src="{(img(P(c.get("image")), 900) or [""])[0]}" alt="" loading="lazy"><span><b>{esc(c.get("title", ""))}</b></span></a>'
+        f'<a class="duo-card reveal" href="{esc(c.get("page", ""))}"><img src="{(img(P(c.get("image")), 900) or [""])[0]}" alt="" loading="lazy"><span><b>{esc(c.get("title", ""))}</b></span></a>'
         for c in PAGES[page].get("cards") or [])
-    extra = f'<section class="band stitched"><div class="wrap"><div class="duo">{cards}</div></div></section>' if cards else ""
+    extra = f'<section class="band"><div class="wrap"><div class="duo">{cards}</div></div></section>' if cards else ""
     return article(page, extra)
 
 def body_gallery_page(page):
@@ -899,13 +931,9 @@ def home():
     slides = "".join(f'<img src="{img(n, 2000)[0]}" alt="{esc(c)}" data-cap="{esc(c)}" {"fetchpriority=high" if i == 0 else "loading=lazy"}>'
                      for i, (n, c) in enumerate(slides_list) if img(n, 2000))
     PHOTOS.extend(("index.html", n, c, img(n, 2000)[0]) for n, c in slides_list if img(n, 2000))
-    scraps = [(n, c) for n, c in photo_list(H.get("scrapbook")) if img(n, 600)]
-    PHOTOS.extend(("index.html", n, c, img(n, 600)[0]) for n, c in scraps)
-    scrap_html = "".join(f'<figure class="scrap s{i}"><img src="{img(n, 600)[0]}" alt="{esc(c)}" loading="lazy"><figcaption>{esc(c)}</figcaption><span class="tape" aria-hidden="true"></span></figure>'
-                         for i, (n, c) in enumerate(scraps))
     sc = H.get("showcase") or {}
     cards = "".join(
-        f'<a class="card tilt reveal" href="{esc(c.get("page", ""))}"><span class="card-img"><img src="{(img(P(c.get("image")), 900) or [""])[0]}" alt="" loading="lazy"></span>'
+        f'<a class="card reveal" href="{esc(c.get("page", ""))}"><span class="card-img"><img src="{(img(P(c.get("image")), 900) or [""])[0]}" alt="" loading="lazy"></span>'
         f'<span class="card-body"><span class="card-title">{esc(c.get("title", ""))}</span><span class="card-text">{esc(c.get("text", ""))}</span>'
         f'<span class="card-more">{esc(c.get("link_label", ""))} <span class="arr">→</span></span></span></a>'
         for c in sc.get("cards") or [])
@@ -924,14 +952,16 @@ def home():
     mu = H.get("musicians") or {}
     roll = "".join(f"<li>{esc(m)}</li>" for m in mu.get("names") or [] if m)
     pa = H.get("partners") or {}
-    plogos = "".join(logo(P(l.get("image")), l.get("link"), l.get("name", "")) for l in pa.get("logos") or [] if l.get("image"))
+    plist = [logo(P(l.get("image")), l.get("link"), l.get("name", "")) for l in pa.get("logos") or [] if l.get("image")]
+    plist = [x for x in plist if x]
+    # the first four logos are the main partners and show larger on the top row
+    plogos = (f'<div class="sponsor-row big">{"".join(plist[:4])}</div>'
+              + (f'<div class="sponsor-row small">{"".join(plist[4:])}</div>' if plist[4:] else ""))
     btns = H.get("buttons") or []
-    def hero_btn(i, b):
+    def hero_btn(i, b):  # the main buttons all look the same
         u = href(b.get("link")) or "#"
-        if i == 0:
-            return f'<a class="btn btn-light" href="{esc(u)}">{esc(b.get("label", ""))}<span class="arr" aria-hidden="true">→</span></a>'
         ext = ' target="_blank" rel="noopener"' if u.startswith("http") else ""
-        return f'<a class="btn btn-outline-light" href="{esc(u)}"{ext}>{esc(b.get("label", ""))}{" ↗" if ext else ""}</a>'
+        return f'<a class="btn btn-light" href="{esc(u)}"{ext}>{esc(b.get("label", ""))}<span class="arr" aria-hidden="true">{"↗" if ext else "→"}</span></a>'
     hp = H.get("help") or {}
     hbtns = hp.get("buttons") or []
     help_btns = "".join(
@@ -947,7 +977,7 @@ def home():
       <p class="hero-since">{esc(H.get("since", ""))}</p>
       <h1 class="hero-title">{esc(H.get("title", ""))}</h1>
       <p class="hero-lede">{esc(H.get("subtitle", ""))}</p>
-      <div class="btn-row">{"".join(hero_btn(i, b) for i, b in enumerate(btns))}</div>
+      <div class="btn-row hero-buttons">{"".join(hero_btn(i, b) for i, b in enumerate(btns))}</div>
     </div>
   </div>
   <div class="hero-dots" aria-hidden="true"></div>
@@ -955,19 +985,16 @@ def home():
   <div class="tear" aria-hidden="true"></div>
 </section>
 <section class="wrap intro">
-  <div class="intro-grid">
-    <div class="scrapbook reveal" aria-label="Photos from SOOTS events">{scrap_html}</div>
-    <div class="prose">{re.sub("<p>", '<p class="dropcap">', para(H.get("intro")), count=1)}<p class="hand">{esc(H.get("motto", ""))}</p></div>
-  </div>
+  <div class="intro-flat prose reveal">{re.sub("<p>", '<p class="dropcap">', para(H.get("intro")), count=1)}{f'<p class="hand">{esc(H["motto"])}</p>' if H.get("motto") else ""}</div>
 </section>
-<section class="band stitched">
+<section class="band">
   <div class="wrap">
-    <div class="section-head reveal"><h2 class="scribble">{esc(sc.get("heading", ""))}</h2></div>
+    <div class="section-head reveal"><h2>{esc(sc.get("heading", ""))}</h2></div>
     <div class="cards">{cards}</div>
   </div>
 </section>
 <section class="timeline-sec">
-  <div class="wrap section-head split reveal"><h2 class="scribble">{esc(tlc.get("heading", ""))}</h2>
+  <div class="wrap section-head split reveal"><h2>{esc(tlc.get("heading", ""))}</h2>
     <div class="tl-ctrl"><button class="tl-btn" data-dir="-1" aria-label="Scroll timeline back">←</button><button class="tl-btn" data-dir="1" aria-label="Scroll timeline forward">→</button></div></div>
   <ol class="h-timeline" tabindex="0" aria-label="SOOTS timeline">{tl}</ol>
 </section>
@@ -983,12 +1010,12 @@ def home():
   </div>
 </section>
 <section class="poster-strip">
-  <div class="wrap section-head split reveal"><h2 class="scribble">{esc(po.get("heading", ""))}</h2><a class="text-link" href="archive.html">{esc(po.get("link_label", ""))}</a></div>
+  <div class="wrap section-head split reveal"><h2>{esc(po.get("heading", ""))}</h2><a class="text-link" href="archive.html">{esc(po.get("link_label", ""))}</a></div>
   <a class="marquee" href="archive.html" aria-label="Poster archive"><div class="marquee-track">{prow}{prow}</div></a>
 </section>
 <section class="wrap partners">
   <div class="section-head center reveal"><h2>{esc(pa.get("heading", ""))}</h2>{ORN}</div>
-  <div class="logo-wall">{plogos}</div>
+  <div class="sponsors">{plogos}</div>
   <p class="center"><a class="text-link" href="local-support.html">{esc(pa.get("link_label", ""))}</a></p>
 </section>
 <section class="cta">

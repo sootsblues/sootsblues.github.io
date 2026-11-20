@@ -1,0 +1,82 @@
+{
+  "title": "SOOTS & Music Maker",
+  "description": "Since 2006, SOOTS has raised money for the Music Maker Relief Foundation, which supports aging roots musicians.",
+  "kicker": "Music Maker Fundraising",
+  "subtitle": "Since 2006",
+  "menu_section": "About",
+  "banner_image": "/photos/639130717.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "",
+    "caption": ""
+  },
+  "facts": [
+    {
+      "label": "Since",
+      "value": "2006"
+    },
+    {
+      "label": "First benefit concert",
+      "value": "2007 · John Dee Holeman and Tim Duffy"
+    },
+    {
+      "label": "Medical Relief Grants",
+      "value": "Three, for our friend George Higgs"
+    }
+  ],
+  "pull_quote": {
+    "text": "",
+    "by": "",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "body": "<p>SOOTS is modeled on the work of Tim and Denise Duffy and their Music Maker Relief Foundation, which supports aging roots musicians with concerts and tours, help with recording, and direct financial aid. Since 2006, Raleigh Charter students have raised money for Music Maker through the Fat Tuesday Feastival, the May Day Cake Bake, and annual benefit concerts from 2007 to 2014 featuring Music Maker artists like John Dee Holeman, George Higgs and Boo Hanks. Along the way we have stamped and stuffed envelopes at the Duffys' home offices, sponsored three Medical Relief Grants for our dear friend George Higgs, and visited Music Maker's new studio in Fountain, NC.</p>"
+    },
+    {
+      "type": "button",
+      "label": "More about Music Maker on their website",
+      "link": "https://musicmaker.org/"
+    },
+    {
+      "type": "slideshow",
+      "label": "Our work with Music Maker",
+      "photos": [
+        {
+          "image": "/photos/639130717.jpg",
+          "caption": "A SOOTS benefit concert for the Music Maker Relief Foundation"
+        },
+        {
+          "image": "/photos/4-05-08-2nd-annual-george-higgs-lets-loose.jpg",
+          "caption": "George Higgs lets loose at the 2nd annual benefit, 2008"
+        },
+        {
+          "image": "/photos/reed-turchi-plays-gospel-at-7th-annual-in-2013.jpg",
+          "caption": "Reed Turchi plays gospel at the 7th annual, 2013"
+        },
+        {
+          "image": "/photos/soots-in-hillsborough-with-sister-perry-and-denise-duffy-of-mmrf-may-2019.jpeg",
+          "caption": "SOOTS in Hillsborough with Sister Perry and Denise Duffy of Music Maker, May 2019"
+        },
+        {
+          "image": "/photos/img-4913_orig.jpg",
+          "caption": "Visiting Music Maker's new studio in Fountain, NC"
+        },
+        {
+          "image": "/photos/img-2801_orig.jpg",
+          "caption": "Inside the Music Maker studio in Fountain"
+        },
+        {
+          "image": "/photos/tim-duffy-s-photo-of-george-higgs-in-memoriam_orig.jpg",
+          "caption": "Tim Duffy's photo of George Higgs, in memoriam"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "body": "<p>More: <a href=\"events.html\">our fundraisers</a> · <a href=\"cake-bake.html\">Cake Bake</a> · <a href=\"fat-tuesday.html\">Fat Tuesday</a> · <a href=\"episode-3-fountain.html\">our visit to Fountain, NC</a> · <a href=\"treasured-artists.html\">treasured artists</a></p>"
+    }
+  ],
+  "sidebar_slideshow": []
+}

@@ -1,0 +1,83 @@
+{
+  "title": "SOOTS & the Love House",
+  "description": "Since 2010, SOOTS has learned alongside UNC-Chapel Hill's Center for the Study of the American South at the Love House.",
+  "kicker": "UNC-CSAS Folklore",
+  "subtitle": "Since 2010",
+  "menu_section": "About",
+  "banner_image": "/photos/1943319304.jpg",
+  "banner_video": "",
+  "sidebar_photo": {
+    "image": "",
+    "caption": ""
+  },
+  "facts": [
+    {
+      "label": "Since",
+      "value": "2010"
+    },
+    {
+      "label": "Home of UNC-CSAS",
+      "value": "The Love House, UNC-Chapel Hill"
+    },
+    {
+      "label": "Mentors",
+      "value": "Bill and Marcie Cohen Ferris"
+    }
+  ],
+  "pull_quote": {
+    "text": "",
+    "by": "",
+    "after_paragraph": 1
+  },
+  "blocks": [
+    {
+      "type": "text",
+      "body": "<p>Since 2010, SOOTS has learned alongside UNC-Chapel Hill's <a href=\"https://south.unc.edu/\">Center for the Study of the American South</a>, which makes its home in the Love House. Following the example of Bill Ferris and his colleagues, our students have been introduced to oral histories, folklife archives and folklore professors. We have organized panels and performances at the Love House, toured the <a href=\"https://library.unc.edu/wilson/sfc/\">Southern Folklife Collection</a>, responded to Bill Ferris' photography from “The South in Color” in our <a href=\"2017.html\">2017 projects</a>, and built our <a href=\"episode-2-food-folklore.html\">Food Folklore</a> projects on the work of Bill and Marcie Cohen Ferris.</p>"
+    },
+    {
+      "type": "button",
+      "label": "More about UNC-CSAS on their website",
+      "link": "https://south.unc.edu/"
+    },
+    {
+      "type": "button",
+      "label": "Our folklore projects",
+      "link": "folk-projects.html"
+    },
+    {
+      "type": "slideshow",
+      "label": "SOOTS with UNC-CSAS at the Love House",
+      "photos": [
+        {
+          "image": "/photos/1943319304.jpg",
+          "caption": "The Love House, home of UNC's Center for the Study of the American South"
+        },
+        {
+          "image": "/photos/lightnin-wells-at-unc-ch-s-love-house-c-2012_orig.jpg",
+          "caption": "Lightnin' Wells at UNC-CH's Love House, c. 2012"
+        },
+        {
+          "image": "/photos/farmers-in-wa-county-mi_1.jpg",
+          "caption": "From our 2017 project on Bill Ferris' photography"
+        },
+        {
+          "image": "/photos/hwy-61_orig.jpg",
+          "caption": "From our 2017 project on Bill Ferris' photography"
+        },
+        {
+          "image": "/photos/screenshot-2025-09-15-at-6-30-24-am.png",
+          "caption": "Food Folklore: 82-year-old Suetta Kaynor makes her grandmother's whole-wheat muffins"
+        },
+        {
+          "image": "/photos/2328951.jpg",
+          "caption": "SOOTS students at work on a folklore project"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "body": "<p>More: <a href=\"bill-ferris.html\">Bill Ferris</a> · <a href=\"2017.html\">2017 projects</a> · <a href=\"episode-2-food-folklore.html\">Food Folklore</a> · <a href=\"soil-to-soul-series.html\">Soil to Soul Series</a></p>"
+    }
+  ],
+  "sidebar_slideshow": []
+}
