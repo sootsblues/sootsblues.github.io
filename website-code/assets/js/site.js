@@ -110,6 +110,35 @@
     restart();
   }
 
+  // 3D tilt + spotlight on cards (pointer devices only)
+  if (matchMedia("(hover: hover)").matches && !reduce) {
+    document.querySelectorAll(".tilt").forEach(function (el) {
+      el.addEventListener("mousemove", function (e) {
+        var r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        el.style.transform = "perspective(900px) rotateX(" + ((0.5 - y) * 5).toFixed(2) + "deg) rotateY(" + ((x - 0.5) * 6).toFixed(2) + "deg) translateY(-4px)";
+        el.style.setProperty("--mx", x * 100 + "%");
+        el.style.setProperty("--my", y * 100 + "%");
+      });
+      el.addEventListener("mouseleave", function () { el.style.transform = ""; });
+    });
+  }
+
+  // Archive posters pop in one after another as they scroll into view
+  var pops = document.querySelectorAll(".g-item.pop");
+  if (pops.length && "IntersectionObserver" in window && !reduce) {
+    var pio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e, k) {
+        if (!e.isIntersecting) return;
+        e.target.style.transitionDelay = (k % 6) * 70 + "ms";
+        e.target.classList.add("in");
+        pio.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -5% 0px", threshold: 0.05 });
+    pops.forEach(function (el) { pio.observe(el); });
+  } else {
+    pops.forEach(function (el) { el.classList.add("in"); });
+  }
+
   // Slideshows: each slide is a figure (photo + caption), so the caption moves with its photo
   document.querySelectorAll(".slider").forEach(function (sl) {
     var track = sl.querySelector(".slider-track"), slides = track.children, n = slides.length, i = 0, timer;

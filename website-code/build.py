@@ -757,7 +757,7 @@ def article(page, extra_after=""):
 def body_social(page):
     d = PAGES[page]
     cards = "".join(
-        f'<a class="social-card" href="{u}" target="_blank" rel="noopener"><span class="sc-icon {ICON_CLASS.get(k, "other")}">{icon(k)}</span><span class="sc-name">{esc(k)}</span>'
+        f'<a class="social-card tilt" href="{u}" target="_blank" rel="noopener"><span class="sc-icon {ICON_CLASS.get(k, "other")}">{icon(k)}</span><span class="sc-name">{esc(k)}</span>'
         f'<span class="sc-handle">{esc(h)}</span><span class="arr" aria-hidden="true">↗</span></a>'
         for k, u, h in SOCIAL)
     return f'<section class="wrap block"><div class="section-head center reveal"><h2>{esc(d.get("heading", ""))}</h2></div><div class="social-cards">{cards}</div></section>'
@@ -799,7 +799,7 @@ def ticket(e):
     r = img(P(e.get("image")), 900)
     pos = e.get("part_of_speech")
     word = f'{esc(e.get("name", ""))} <em>({esc(pos)})</em>' if pos else esc(e.get("name", ""))
-    return f'''<a class="ticket reveal" href="{esc(e.get("page", ""))}">
+    return f'''<a class="ticket tilt reveal" href="{esc(e.get("page", ""))}">
   <span class="t-img"><img src="{r[0] if r else ""}" alt="" loading="lazy"></span>
   <span class="t-body"><span class="t-word">{word}</span><span class="t-def">{esc(e.get("definition", ""))}</span><span class="t-more">Learn more →</span></span>
   <span class="t-stub"><span>{esc(e.get("stub_top", ""))}</span><b>Admit<br>One</b><span>{esc(e.get("stub_bottom", ""))}</span></span>
@@ -850,7 +850,7 @@ def body_archive(page):
             r = img(name, 1000)
             if r:
                 c = cap or t
-                figs.append(f'<figure class="g-item poster" data-tag="s{i}"><a href="{r[1]}" class="lb" data-cap="{esc(c)}"><img src="{r[0]}" width="{r[2]}" height="{r[3]}" alt="{esc(c)}" loading="lazy"></a>'
+                figs.append(f'<figure class="g-item poster pop" data-tag="s{i}"><a href="{r[1]}" class="lb" data-cap="{esc(c)}"><img src="{r[0]}" width="{r[2]}" height="{r[3]}" alt="{esc(c)}" loading="lazy"></a>'
                             f'<figcaption>{esc(cap) if cap else esc(t)}</figcaption></figure>')
     return f'''<section class="wrap block"><div class="section-head reveal"><h2>{esc(d.get("heading", ""))}</h2></div>
 <div class="filterable"><div class="chips" role="toolbar" aria-label="Filter posters">{tabs}</div><div class="gallery posters">{"".join(figs)}</div></div></section>'''
@@ -895,7 +895,7 @@ def body_2026(page):
 
 def body_in_the_field(page):
     cards = "".join(
-        f'<a class="duo-card reveal" href="{esc(c.get("page", ""))}"><img src="{(img(P(c.get("image")), 900) or [""])[0]}" alt="" loading="lazy"><span><b>{esc(c.get("title", ""))}</b></span></a>'
+        f'<a class="duo-card tilt reveal" href="{esc(c.get("page", ""))}"><img src="{(img(P(c.get("image")), 900) or [""])[0]}" alt="" loading="lazy"><span><b>{esc(c.get("title", ""))}</b></span></a>'
         for c in PAGES[page].get("cards") or [])
     extra = f'<section class="band"><div class="wrap"><div class="duo">{cards}</div></div></section>' if cards else ""
     return article(page, extra)
@@ -933,7 +933,7 @@ def home():
     PHOTOS.extend(("index.html", n, c, img(n, 2000)[0]) for n, c in slides_list if img(n, 2000))
     sc = H.get("showcase") or {}
     cards = "".join(
-        f'<a class="card reveal" href="{esc(c.get("page", ""))}"><span class="card-img"><img src="{(img(P(c.get("image")), 900) or [""])[0]}" alt="" loading="lazy"></span>'
+        f'<a class="card tilt reveal" href="{esc(c.get("page", ""))}"><span class="card-img"><img src="{(img(P(c.get("image")), 900) or [""])[0]}" alt="" loading="lazy"></span>'
         f'<span class="card-body"><span class="card-title">{esc(c.get("title", ""))}</span><span class="card-text">{esc(c.get("text", ""))}</span>'
         f'<span class="card-more">{esc(c.get("link_label", ""))} <span class="arr">→</span></span></span></a>'
         for c in sc.get("cards") or [])
@@ -948,7 +948,28 @@ def home():
     ls = H.get("listen") or {}
     tracks = "".join(player(F(t["file"]), t.get("title")) for t in ls.get("tracks") or [] if t.get("file"))
     po = H.get("posters") or {}
-    prow = "".join(f'<img src="{img(P(p), 500)[0]}" alt="" loading="lazy">' for p in po.get("images") or [] if p and img(P(p), 500))
+    # every poster on the home list, then every poster in the archive, each once
+    wall, seen = [], set()
+    arch = PAGES.get("archive.html", {})
+    arch_caps = {}
+    for g in arch.get("poster_groups") or []:
+        for n, c in photo_list(g.get("posters")):
+            arch_caps.setdefault(stem_of(n), c or g.get("title") or "")
+    for n in [P(p) for p in po.get("images") or [] if p] + [n for g in arch.get("poster_groups") or [] for n, _ in photo_list(g.get("posters"))]:
+        if stem_of(n) in seen or not img(n, 700):
+            continue
+        seen.add(stem_of(n))
+        wall.append((n, arch_caps.get(stem_of(n), "")))
+    def poster_row(items, cls, dur):
+        if not items:
+            return ""
+        first = "".join(f'<a class="lb" href="{img(n, 700)[1]}" data-cap="{esc(c)}"><img src="{img(n, 700)[0]}" alt="{esc(c)}" loading="lazy"></a>' for n, c in items)
+        loop = "".join(f'<a href="archive.html" tabindex="-1" aria-hidden="true"><img src="{img(n, 700)[0]}" alt="" loading="lazy"></a>' for n, _ in items)
+        return f'<div class="poster-row {cls}" style="--dur:{dur}s"><div class="poster-track">{first}{loop}</div></div>'
+    k = max(1, len(wall) // 3)
+    # the same posters in three different orders, so neighbouring rows never line up
+    rows = [wall, wall[1::2] + wall[0::2], wall[2 * k:] + wall[:2 * k]]
+    prows = (poster_row(rows[0], "", 80) + poster_row(rows[1], "rev", 60) + poster_row(rows[2], "", 100)) if wall else ""
     mu = H.get("musicians") or {}
     roll = "".join(f"<li>{esc(m)}</li>" for m in mu.get("names") or [] if m)
     pa = H.get("partners") or {}
@@ -1009,9 +1030,9 @@ def home():
     <div class="listen-now reveal"><div class="players">{tracks}</div></div>
   </div>
 </section>
-<section class="poster-strip">
-  <div class="wrap section-head split reveal"><h2>{esc(po.get("heading", ""))}</h2><a class="text-link" href="archive.html">{esc(po.get("link_label", ""))}</a></div>
-  <a class="marquee" href="archive.html" aria-label="Poster archive"><div class="marquee-track">{prow}{prow}</div></a>
+<section class="poster-wall" aria-label="{esc(po.get("heading", ""))}">
+  <div class="wrap poster-head reveal"><h2>{esc(po.get("heading", ""))}</h2><p>{len(wall)} posters and prints from SOOTS concerts, bakes and festivals</p><a class="btn btn-light" href="archive.html">{esc(po.get("link_label", ""))}</a></div>
+  <div class="poster-rows">{prows}</div>
 </section>
 <section class="wrap partners">
   <div class="section-head center reveal"><h2>{esc(pa.get("heading", ""))}</h2>{ORN}</div>
